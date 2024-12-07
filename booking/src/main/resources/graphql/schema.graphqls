@@ -2,59 +2,59 @@
 
 # Reservation Type
 type Reservation {
-    id: ID!
-    dateDebut: String!
-    dateFin: String!
-    client: Client!
-    chambre: Chambre!
-    preferences: [Preference!]!
+    id: ID
+    dateDebut: String
+    dateFin: String
+    client: Client
+    chambre: Chambre
+    preferences: [Preference]
 }
 
 # Client Type
 type Client {
-    id: ID!
-    nom: String!
-    prenom: String!
-    email: String!
-    reservations: [Reservation!]!
+    id: ID
+    nom: String
+    prenom: String
+    email: String
+    reservations: [Reservation]
 }
 
 # Chambre Type
 type Chambre {
-    id: ID!
-    numero: Int!
-    type: String!
-    prix: Float!
-    reservations: [Reservation!]!
+    id: ID
+    numero: Int
+    type: String
+    prix: Float
+    reservations: [Reservation]
 }
 
 # Preference Type
 type Preference {
-    id: ID!
-    nom: String!
+    id: ID
+    nom: String
 }
 
 # Input Type for ReservationDTO
 input ReservationInput {
-    dateDebut: String!
-    dateFin: String!
-    clientId: ID!
-    chambreId: ID!
-    preferences: [PreferenceInput!]!
+    dateDebut: String
+    dateFin: String
+    clientId: ID
+    chambreId: ID
+    preferences: [PreferenceInput]
 }
 
 # Input Type for Preference
 input PreferenceInput {
-    nom: String!
+    nom: String
 }
 
 # Queries
 type Query {
     # Fetch all reservations
-    findAllReservations: [Reservation!]!
+    findAllReservations: [Reservation]
 
     # Fetch a specific reservation by ID
-    findReservationById(id: ID!): Reservation
+    findReservationById(id: ID): Reservation
 }
 
 # Mutations
@@ -63,8 +63,8 @@ type Mutation {
     saveReservation(reservationDTO: ReservationInput): Reservation
 
     # Update an existing reservation
-    updateReservation(reservationDTO: ReservationInput!, id: ID!): Reservation!
+    updateReservation(reservationDTO: ReservationInput, id: ID): Reservation
 
     # Delete a reservation
-    deleteReservation(id: ID!): Boolean!
+    deleteReservation(id: ID): Boolean
 }
