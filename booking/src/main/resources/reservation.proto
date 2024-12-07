@@ -1,0 +1,115 @@
+syntax = "proto";
+option java_package = "com.project.booking.stubs";
+option java_multiple_files = true;
+
+// Enumeration pour le type de chambre
+
+enum TypeChambre {
+  SIMPLE = 0;
+  DOUBLE = 1;
+}
+
+// Message représentant un compte
+message Chambre {
+  int64 id = 1;
+  string prix = 2;
+  bool disponible = 3;
+  TypeChambre type = 4;
+}
+
+// Message représentant un client
+message Client {
+  int64 id = 1;
+  string nom = 2;
+  string prenom = 3;
+  string email = 4;
+  string  telephone = 5;
+}
+
+// Message représentant une preference
+message Preference {
+  int64 id = 1;
+  string nom = 2;
+}
+
+// Message représentant une reservation
+message Reservation {
+  int64 id = 1;
+  string dateDebut = 2;
+  string dateFin = 3;
+  Client client = 4;
+  Chambre chambre = 5;
+  Preference preference = 6;
+}
+
+// Requete pour obtenir tous les chambres
+message getAllchambresRequest{}
+// Réponse contenant la liste des chambres
+message getAllchambresResponse {
+  repeated Chambre chambres = 1;
+}
+
+// Requete pour obtenir tous les preferences
+message getAllPreferencesRequest{}
+// Réponse contenant la liste des preferences
+message getAllPreferencesResponse {
+  repeated Preference preferences = 1;
+}
+
+
+// Requete pour obtenir tous les reservations
+message getAllReservationsRequest{}
+// Réponse contenant la liste des reservations
+message getAllReservationsResponse {
+  repeated Reservation reservations = 1;
+}
+
+
+// Requete pour obtenir une reservation par son id
+message getReservationByIdRequest{
+  string id = 1;
+}
+// Réponse contenant la liste des comptes
+message getReservationByIdResponse {
+  Reservation reservation = 1;
+}
+
+
+// Requete pour supprimer une reservation par son id
+message deleteReservationByIdRequest{
+  string id = 1;
+}
+message DeleteCompteResult {
+  string result = 1;
+}
+// Requete pour ajouer une reservation
+message  deleteReservationByIdResponse{
+    DeleteCompteResult deleted = 1;
+}
+
+
+// Requête pour ajouter/modifier une reservation
+message saveReservationRequest {
+  Reservation reservation = 1;
+}
+
+// Réponse contenant la reservation sauvegardée
+message saveReservationResponse {
+  Reservation reservation = 1;
+}
+
+
+// Définition du service correspondant aux requêtes et mutations GraphQL
+service CompteService {
+  // Équivalent de la requête allReservations
+  rpc AllReservations(getAllReservationsRequest) returns (getAllReservationsResponse);
+
+  // Équivalent de la requête reservationById
+  rpc ReservationById(getReservationByIdRequest) returns (getReservationByIdResponse);
+
+  // Équivalent de la mutation saveReservation
+  rpc SaveReservation(saveReservationRequest) returns (saveReservationResponse);
+
+  // Équivalent de la mutation deleteReservationById
+  rpc DeleteReservationById(deleteReservationByIdRequest) returns (deleteReservationByIdResponse);
+}

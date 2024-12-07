@@ -1,6 +1,7 @@
 package com.project.booking.services;
 
 import com.project.booking.dto.ReservationDTO;
+import com.project.booking.entities.Chambre;
 import com.project.booking.entities.Preference;
 import com.project.booking.entities.Reservation;
 import com.project.booking.repositories.ChambreRepository;
@@ -72,5 +73,12 @@ public class ReservationService {
         return reservationRepository.save(res);
     }
 
+    public List <Chambre> getAllchambres(){
+        return chambreRepository.findAll();
+    }
+
+    public List <Preference> getAllPreferences(){
+        return preferenceRepository.findAll();
+    }
 
 }
