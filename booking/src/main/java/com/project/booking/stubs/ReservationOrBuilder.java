@@ -38,47 +38,76 @@ public interface ReservationOrBuilder extends
       getDateFinBytes();
 
   /**
-   * <code>.Client client = 4;</code>
-   * @return Whether the client field is set.
-   */
-  boolean hasClient();
-  /**
-   * <code>.Client client = 4;</code>
-   * @return The client.
-   */
-  com.project.booking.stubs.Client getClient();
-  /**
-   * <code>.Client client = 4;</code>
-   */
-  com.project.booking.stubs.ClientOrBuilder getClientOrBuilder();
-
-  /**
-   * <code>.Chambre chambre = 5;</code>
+   * <code>.Chambre chambre = 4;</code>
    * @return Whether the chambre field is set.
    */
   boolean hasChambre();
   /**
-   * <code>.Chambre chambre = 5;</code>
+   * <code>.Chambre chambre = 4;</code>
    * @return The chambre.
    */
   com.project.booking.stubs.Chambre getChambre();
   /**
-   * <code>.Chambre chambre = 5;</code>
+   * <code>.Chambre chambre = 4;</code>
    */
   com.project.booking.stubs.ChambreOrBuilder getChambreOrBuilder();
 
   /**
-   * <code>.Preference preference = 6;</code>
-   * @return Whether the preference field is set.
+   * <code>.Client client = 5;</code>
+   * @return Whether the client field is set.
    */
-  boolean hasPreference();
+  boolean hasClient();
   /**
-   * <code>.Preference preference = 6;</code>
-   * @return The preference.
+   * <code>.Client client = 5;</code>
+   * @return The client.
    */
-  com.project.booking.stubs.Preference getPreference();
+  com.project.booking.stubs.Client getClient();
   /**
-   * <code>.Preference preference = 6;</code>
+   * <code>.Client client = 5;</code>
    */
-  com.project.booking.stubs.PreferenceOrBuilder getPreferenceOrBuilder();
+  com.project.booking.stubs.ClientOrBuilder getClientOrBuilder();
+
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  java.util.List<com.project.booking.stubs.Preference> 
+      getPreferencesList();
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  com.project.booking.stubs.Preference getPreferences(int index);
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  int getPreferencesCount();
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  java.util.List<? extends com.project.booking.stubs.PreferenceOrBuilder> 
+      getPreferencesOrBuilderList();
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  com.project.booking.stubs.PreferenceOrBuilder getPreferencesOrBuilder(
+      int index);
 }

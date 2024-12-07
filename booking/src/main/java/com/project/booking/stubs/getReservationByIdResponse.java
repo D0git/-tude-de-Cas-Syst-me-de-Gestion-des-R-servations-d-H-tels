@@ -5,7 +5,7 @@ package com.project.booking.stubs;
 
 /**
  * <pre>
- * Réponse contenant la liste des comptes
+ * Réponse contenant la liste des reservations
  * </pre>
  *
  * Protobuf type {@code getReservationByIdResponse}
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Réponse contenant la liste des comptes
+   * Réponse contenant la liste des reservations
    * </pre>
    *
    * Protobuf type {@code getReservationByIdResponse}

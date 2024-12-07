@@ -5,7 +5,7 @@ package com.project.booking.stubs;
 
 /**
  * <pre>
- * Message représentant un compte
+ * Message représentant une chambre
  * </pre>
  *
  * Protobuf type {@code Chambre}
@@ -373,7 +373,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Message représentant un compte
+   * Message représentant une chambre
    * </pre>
    *
    * Protobuf type {@code Chambre}

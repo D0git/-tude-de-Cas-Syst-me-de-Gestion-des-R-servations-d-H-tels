@@ -9,7 +9,7 @@ enum TypeChambre {
   DOUBLE = 1;
 }
 
-// Message représentant un compte
+// Message représentant une chambre
 message Chambre {
   int64 id = 1;
   string prix = 2;
@@ -37,10 +37,11 @@ message Reservation {
   int64 id = 1;
   string dateDebut = 2;
   string dateFin = 3;
-  Client client = 4;
-  Chambre chambre = 5;
-  Preference preference = 6;
+  Chambre chambre = 4;
+  Client client = 5;
+  repeated Preference preferences = 6; // Champ repeated pour les préférences
 }
+
 
 // Requete pour obtenir tous les chambres
 message getAllchambresRequest{}
@@ -69,7 +70,7 @@ message getAllReservationsResponse {
 message getReservationByIdRequest{
   string id = 1;
 }
-// Réponse contenant la liste des comptes
+// Réponse contenant la liste des reservations
 message getReservationByIdResponse {
   Reservation reservation = 1;
 }
@@ -79,12 +80,12 @@ message getReservationByIdResponse {
 message deleteReservationByIdRequest{
   string id = 1;
 }
-message DeleteCompteResult {
+message DeleteReservationResult {
   string result = 1;
 }
 // Requete pour ajouer une reservation
 message  deleteReservationByIdResponse{
-    DeleteCompteResult deleted = 1;
+    DeleteReservationResult deleted = 1;
 }
 
 
@@ -100,7 +101,7 @@ message saveReservationResponse {
 
 
 // Définition du service correspondant aux requêtes et mutations GraphQL
-service CompteService {
+service ReservationService {
   // Équivalent de la requête allReservations
   rpc AllReservations(getAllReservationsRequest) returns (getAllReservationsResponse);
 

@@ -4,18 +4,18 @@
 package com.project.booking.stubs;
 
 /**
- * Protobuf type {@code DeleteCompteResult}
+ * Protobuf type {@code DeleteReservationResult}
  */
-public  final class DeleteCompteResult extends
+public  final class DeleteReservationResult extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:DeleteCompteResult)
-    DeleteCompteResultOrBuilder {
+    // @@protoc_insertion_point(message_implements:DeleteReservationResult)
+    DeleteReservationResultOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DeleteCompteResult.newBuilder() to construct.
-  private DeleteCompteResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DeleteReservationResult.newBuilder() to construct.
+  private DeleteReservationResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DeleteCompteResult() {
+  private DeleteReservationResult() {
     result_ = "";
   }
 
@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DeleteCompteResult();
+    return new DeleteReservationResult();
   }
 
   @java.lang.Override
@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DeleteCompteResult(
+  private DeleteReservationResult(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -76,15 +76,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteCompteResult_descriptor;
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteReservationResult_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteCompteResult_fieldAccessorTable
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteReservationResult_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.project.booking.stubs.DeleteCompteResult.class, com.project.booking.stubs.DeleteCompteResult.Builder.class);
+            com.project.booking.stubs.DeleteReservationResult.class, com.project.booking.stubs.DeleteReservationResult.Builder.class);
   }
 
   public static final int RESULT_FIELD_NUMBER = 1;
@@ -162,10 +162,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.project.booking.stubs.DeleteCompteResult)) {
+    if (!(obj instanceof com.project.booking.stubs.DeleteReservationResult)) {
       return super.equals(obj);
     }
-    com.project.booking.stubs.DeleteCompteResult other = (com.project.booking.stubs.DeleteCompteResult) obj;
+    com.project.booking.stubs.DeleteReservationResult other = (com.project.booking.stubs.DeleteReservationResult) obj;
 
     if (!getResult()
         .equals(other.getResult())) return false;
@@ -187,69 +187,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(byte[] data)
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseDelimitedFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.DeleteReservationResult parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseDelimitedFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.DeleteCompteResult parseFrom(
+  public static com.project.booking.stubs.DeleteReservationResult parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.project.booking.stubs.DeleteCompteResult prototype) {
+  public static Builder newBuilder(com.project.booking.stubs.DeleteReservationResult prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -278,26 +278,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code DeleteCompteResult}
+   * Protobuf type {@code DeleteReservationResult}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:DeleteCompteResult)
-      com.project.booking.stubs.DeleteCompteResultOrBuilder {
+      // @@protoc_insertion_point(builder_implements:DeleteReservationResult)
+      com.project.booking.stubs.DeleteReservationResultOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteCompteResult_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteReservationResult_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteCompteResult_fieldAccessorTable
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteReservationResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.project.booking.stubs.DeleteCompteResult.class, com.project.booking.stubs.DeleteCompteResult.Builder.class);
+              com.project.booking.stubs.DeleteReservationResult.class, com.project.booking.stubs.DeleteReservationResult.Builder.class);
     }
 
-    // Construct using com.project.booking.stubs.DeleteCompteResult.newBuilder()
+    // Construct using com.project.booking.stubs.DeleteReservationResult.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -323,17 +323,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteCompteResult_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_DeleteReservationResult_descriptor;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.DeleteCompteResult getDefaultInstanceForType() {
-      return com.project.booking.stubs.DeleteCompteResult.getDefaultInstance();
+    public com.project.booking.stubs.DeleteReservationResult getDefaultInstanceForType() {
+      return com.project.booking.stubs.DeleteReservationResult.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.DeleteCompteResult build() {
-      com.project.booking.stubs.DeleteCompteResult result = buildPartial();
+    public com.project.booking.stubs.DeleteReservationResult build() {
+      com.project.booking.stubs.DeleteReservationResult result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -341,8 +341,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.DeleteCompteResult buildPartial() {
-      com.project.booking.stubs.DeleteCompteResult result = new com.project.booking.stubs.DeleteCompteResult(this);
+    public com.project.booking.stubs.DeleteReservationResult buildPartial() {
+      com.project.booking.stubs.DeleteReservationResult result = new com.project.booking.stubs.DeleteReservationResult(this);
       result.result_ = result_;
       onBuilt();
       return result;
@@ -382,16 +382,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.project.booking.stubs.DeleteCompteResult) {
-        return mergeFrom((com.project.booking.stubs.DeleteCompteResult)other);
+      if (other instanceof com.project.booking.stubs.DeleteReservationResult) {
+        return mergeFrom((com.project.booking.stubs.DeleteReservationResult)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.project.booking.stubs.DeleteCompteResult other) {
-      if (other == com.project.booking.stubs.DeleteCompteResult.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.project.booking.stubs.DeleteReservationResult other) {
+      if (other == com.project.booking.stubs.DeleteReservationResult.getDefaultInstance()) return this;
       if (!other.getResult().isEmpty()) {
         result_ = other.result_;
         onChanged();
@@ -411,11 +411,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.project.booking.stubs.DeleteCompteResult parsedMessage = null;
+      com.project.booking.stubs.DeleteReservationResult parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.project.booking.stubs.DeleteCompteResult) e.getUnfinishedMessage();
+        parsedMessage = (com.project.booking.stubs.DeleteReservationResult) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -513,41 +513,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:DeleteCompteResult)
+    // @@protoc_insertion_point(builder_scope:DeleteReservationResult)
   }
 
-  // @@protoc_insertion_point(class_scope:DeleteCompteResult)
-  private static final com.project.booking.stubs.DeleteCompteResult DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:DeleteReservationResult)
+  private static final com.project.booking.stubs.DeleteReservationResult DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.project.booking.stubs.DeleteCompteResult();
+    DEFAULT_INSTANCE = new com.project.booking.stubs.DeleteReservationResult();
   }
 
-  public static com.project.booking.stubs.DeleteCompteResult getDefaultInstance() {
+  public static com.project.booking.stubs.DeleteReservationResult getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DeleteCompteResult>
-      PARSER = new com.google.protobuf.AbstractParser<DeleteCompteResult>() {
+  private static final com.google.protobuf.Parser<DeleteReservationResult>
+      PARSER = new com.google.protobuf.AbstractParser<DeleteReservationResult>() {
     @java.lang.Override
-    public DeleteCompteResult parsePartialFrom(
+    public DeleteReservationResult parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DeleteCompteResult(input, extensionRegistry);
+      return new DeleteReservationResult(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<DeleteCompteResult> parser() {
+  public static com.google.protobuf.Parser<DeleteReservationResult> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DeleteCompteResult> getParserForType() {
+  public com.google.protobuf.Parser<DeleteReservationResult> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.project.booking.stubs.DeleteCompteResult getDefaultInstanceForType() {
+  public com.project.booking.stubs.DeleteReservationResult getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

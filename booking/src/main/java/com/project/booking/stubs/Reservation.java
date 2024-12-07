@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private Reservation() {
     dateDebut_ = "";
     dateFin_ = "";
+    preferences_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -44,6 +45,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -72,19 +74,6 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            com.project.booking.stubs.Client.Builder subBuilder = null;
-            if (client_ != null) {
-              subBuilder = client_.toBuilder();
-            }
-            client_ = input.readMessage(com.project.booking.stubs.Client.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(client_);
-              client_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
             com.project.booking.stubs.Chambre.Builder subBuilder = null;
             if (chambre_ != null) {
               subBuilder = chambre_.toBuilder();
@@ -97,17 +86,26 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 50: {
-            com.project.booking.stubs.Preference.Builder subBuilder = null;
-            if (preference_ != null) {
-              subBuilder = preference_.toBuilder();
+          case 42: {
+            com.project.booking.stubs.Client.Builder subBuilder = null;
+            if (client_ != null) {
+              subBuilder = client_.toBuilder();
             }
-            preference_ = input.readMessage(com.project.booking.stubs.Preference.parser(), extensionRegistry);
+            client_ = input.readMessage(com.project.booking.stubs.Client.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(preference_);
-              preference_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(client_);
+              client_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 50: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              preferences_ = new java.util.ArrayList<com.project.booking.stubs.Preference>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            preferences_.add(
+                input.readMessage(com.project.booking.stubs.Preference.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -125,6 +123,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        preferences_ = java.util.Collections.unmodifiableList(preferences_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -224,73 +225,105 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CLIENT_FIELD_NUMBER = 4;
-  private com.project.booking.stubs.Client client_;
-  /**
-   * <code>.Client client = 4;</code>
-   * @return Whether the client field is set.
-   */
-  public boolean hasClient() {
-    return client_ != null;
-  }
-  /**
-   * <code>.Client client = 4;</code>
-   * @return The client.
-   */
-  public com.project.booking.stubs.Client getClient() {
-    return client_ == null ? com.project.booking.stubs.Client.getDefaultInstance() : client_;
-  }
-  /**
-   * <code>.Client client = 4;</code>
-   */
-  public com.project.booking.stubs.ClientOrBuilder getClientOrBuilder() {
-    return getClient();
-  }
-
-  public static final int CHAMBRE_FIELD_NUMBER = 5;
+  public static final int CHAMBRE_FIELD_NUMBER = 4;
   private com.project.booking.stubs.Chambre chambre_;
   /**
-   * <code>.Chambre chambre = 5;</code>
+   * <code>.Chambre chambre = 4;</code>
    * @return Whether the chambre field is set.
    */
   public boolean hasChambre() {
     return chambre_ != null;
   }
   /**
-   * <code>.Chambre chambre = 5;</code>
+   * <code>.Chambre chambre = 4;</code>
    * @return The chambre.
    */
   public com.project.booking.stubs.Chambre getChambre() {
     return chambre_ == null ? com.project.booking.stubs.Chambre.getDefaultInstance() : chambre_;
   }
   /**
-   * <code>.Chambre chambre = 5;</code>
+   * <code>.Chambre chambre = 4;</code>
    */
   public com.project.booking.stubs.ChambreOrBuilder getChambreOrBuilder() {
     return getChambre();
   }
 
-  public static final int PREFERENCE_FIELD_NUMBER = 6;
-  private com.project.booking.stubs.Preference preference_;
+  public static final int CLIENT_FIELD_NUMBER = 5;
+  private com.project.booking.stubs.Client client_;
   /**
-   * <code>.Preference preference = 6;</code>
-   * @return Whether the preference field is set.
+   * <code>.Client client = 5;</code>
+   * @return Whether the client field is set.
    */
-  public boolean hasPreference() {
-    return preference_ != null;
+  public boolean hasClient() {
+    return client_ != null;
   }
   /**
-   * <code>.Preference preference = 6;</code>
-   * @return The preference.
+   * <code>.Client client = 5;</code>
+   * @return The client.
    */
-  public com.project.booking.stubs.Preference getPreference() {
-    return preference_ == null ? com.project.booking.stubs.Preference.getDefaultInstance() : preference_;
+  public com.project.booking.stubs.Client getClient() {
+    return client_ == null ? com.project.booking.stubs.Client.getDefaultInstance() : client_;
   }
   /**
-   * <code>.Preference preference = 6;</code>
+   * <code>.Client client = 5;</code>
    */
-  public com.project.booking.stubs.PreferenceOrBuilder getPreferenceOrBuilder() {
-    return getPreference();
+  public com.project.booking.stubs.ClientOrBuilder getClientOrBuilder() {
+    return getClient();
+  }
+
+  public static final int PREFERENCES_FIELD_NUMBER = 6;
+  private java.util.List<com.project.booking.stubs.Preference> preferences_;
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  public java.util.List<com.project.booking.stubs.Preference> getPreferencesList() {
+    return preferences_;
+  }
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  public java.util.List<? extends com.project.booking.stubs.PreferenceOrBuilder> 
+      getPreferencesOrBuilderList() {
+    return preferences_;
+  }
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  public int getPreferencesCount() {
+    return preferences_.size();
+  }
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  public com.project.booking.stubs.Preference getPreferences(int index) {
+    return preferences_.get(index);
+  }
+  /**
+   * <pre>
+   * Champ repeated pour les préférences
+   * </pre>
+   *
+   * <code>repeated .Preference preferences = 6;</code>
+   */
+  public com.project.booking.stubs.PreferenceOrBuilder getPreferencesOrBuilder(
+      int index) {
+    return preferences_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -316,14 +349,14 @@ private static final long serialVersionUID = 0L;
     if (!getDateFinBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dateFin_);
     }
-    if (client_ != null) {
-      output.writeMessage(4, getClient());
-    }
     if (chambre_ != null) {
-      output.writeMessage(5, getChambre());
+      output.writeMessage(4, getChambre());
     }
-    if (preference_ != null) {
-      output.writeMessage(6, getPreference());
+    if (client_ != null) {
+      output.writeMessage(5, getClient());
+    }
+    for (int i = 0; i < preferences_.size(); i++) {
+      output.writeMessage(6, preferences_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -344,17 +377,17 @@ private static final long serialVersionUID = 0L;
     if (!getDateFinBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dateFin_);
     }
-    if (client_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getClient());
-    }
     if (chambre_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getChambre());
+        .computeMessageSize(4, getChambre());
     }
-    if (preference_ != null) {
+    if (client_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getPreference());
+        .computeMessageSize(5, getClient());
+    }
+    for (int i = 0; i < preferences_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, preferences_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -377,21 +410,18 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDateDebut())) return false;
     if (!getDateFin()
         .equals(other.getDateFin())) return false;
-    if (hasClient() != other.hasClient()) return false;
-    if (hasClient()) {
-      if (!getClient()
-          .equals(other.getClient())) return false;
-    }
     if (hasChambre() != other.hasChambre()) return false;
     if (hasChambre()) {
       if (!getChambre()
           .equals(other.getChambre())) return false;
     }
-    if (hasPreference() != other.hasPreference()) return false;
-    if (hasPreference()) {
-      if (!getPreference()
-          .equals(other.getPreference())) return false;
+    if (hasClient() != other.hasClient()) return false;
+    if (hasClient()) {
+      if (!getClient()
+          .equals(other.getClient())) return false;
     }
+    if (!getPreferencesList()
+        .equals(other.getPreferencesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -410,17 +440,17 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDateDebut().hashCode();
     hash = (37 * hash) + DATEFIN_FIELD_NUMBER;
     hash = (53 * hash) + getDateFin().hashCode();
-    if (hasClient()) {
-      hash = (37 * hash) + CLIENT_FIELD_NUMBER;
-      hash = (53 * hash) + getClient().hashCode();
-    }
     if (hasChambre()) {
       hash = (37 * hash) + CHAMBRE_FIELD_NUMBER;
       hash = (53 * hash) + getChambre().hashCode();
     }
-    if (hasPreference()) {
-      hash = (37 * hash) + PREFERENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getPreference().hashCode();
+    if (hasClient()) {
+      hash = (37 * hash) + CLIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getClient().hashCode();
+    }
+    if (getPreferencesCount() > 0) {
+      hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
+      hash = (53 * hash) + getPreferencesList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -554,6 +584,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getPreferencesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -565,23 +596,23 @@ private static final long serialVersionUID = 0L;
 
       dateFin_ = "";
 
-      if (clientBuilder_ == null) {
-        client_ = null;
-      } else {
-        client_ = null;
-        clientBuilder_ = null;
-      }
       if (chambreBuilder_ == null) {
         chambre_ = null;
       } else {
         chambre_ = null;
         chambreBuilder_ = null;
       }
-      if (preferenceBuilder_ == null) {
-        preference_ = null;
+      if (clientBuilder_ == null) {
+        client_ = null;
       } else {
-        preference_ = null;
-        preferenceBuilder_ = null;
+        client_ = null;
+        clientBuilder_ = null;
+      }
+      if (preferencesBuilder_ == null) {
+        preferences_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      } else {
+        preferencesBuilder_.clear();
       }
       return this;
     }
@@ -609,23 +640,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.project.booking.stubs.Reservation buildPartial() {
       com.project.booking.stubs.Reservation result = new com.project.booking.stubs.Reservation(this);
+      int from_bitField0_ = bitField0_;
       result.id_ = id_;
       result.dateDebut_ = dateDebut_;
       result.dateFin_ = dateFin_;
-      if (clientBuilder_ == null) {
-        result.client_ = client_;
-      } else {
-        result.client_ = clientBuilder_.build();
-      }
       if (chambreBuilder_ == null) {
         result.chambre_ = chambre_;
       } else {
         result.chambre_ = chambreBuilder_.build();
       }
-      if (preferenceBuilder_ == null) {
-        result.preference_ = preference_;
+      if (clientBuilder_ == null) {
+        result.client_ = client_;
       } else {
-        result.preference_ = preferenceBuilder_.build();
+        result.client_ = clientBuilder_.build();
+      }
+      if (preferencesBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          preferences_ = java.util.Collections.unmodifiableList(preferences_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.preferences_ = preferences_;
+      } else {
+        result.preferences_ = preferencesBuilder_.build();
       }
       onBuilt();
       return result;
@@ -686,14 +722,37 @@ private static final long serialVersionUID = 0L;
         dateFin_ = other.dateFin_;
         onChanged();
       }
-      if (other.hasClient()) {
-        mergeClient(other.getClient());
-      }
       if (other.hasChambre()) {
         mergeChambre(other.getChambre());
       }
-      if (other.hasPreference()) {
-        mergePreference(other.getPreference());
+      if (other.hasClient()) {
+        mergeClient(other.getClient());
+      }
+      if (preferencesBuilder_ == null) {
+        if (!other.preferences_.isEmpty()) {
+          if (preferences_.isEmpty()) {
+            preferences_ = other.preferences_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePreferencesIsMutable();
+            preferences_.addAll(other.preferences_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.preferences_.isEmpty()) {
+          if (preferencesBuilder_.isEmpty()) {
+            preferencesBuilder_.dispose();
+            preferencesBuilder_ = null;
+            preferences_ = other.preferences_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            preferencesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPreferencesFieldBuilder() : null;
+          } else {
+            preferencesBuilder_.addAllMessages(other.preferences_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -723,6 +782,7 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
     private long id_ ;
     /**
@@ -906,137 +966,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.project.booking.stubs.Client client_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder> clientBuilder_;
-    /**
-     * <code>.Client client = 4;</code>
-     * @return Whether the client field is set.
-     */
-    public boolean hasClient() {
-      return clientBuilder_ != null || client_ != null;
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     * @return The client.
-     */
-    public com.project.booking.stubs.Client getClient() {
-      if (clientBuilder_ == null) {
-        return client_ == null ? com.project.booking.stubs.Client.getDefaultInstance() : client_;
-      } else {
-        return clientBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    public Builder setClient(com.project.booking.stubs.Client value) {
-      if (clientBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        client_ = value;
-        onChanged();
-      } else {
-        clientBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    public Builder setClient(
-        com.project.booking.stubs.Client.Builder builderForValue) {
-      if (clientBuilder_ == null) {
-        client_ = builderForValue.build();
-        onChanged();
-      } else {
-        clientBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    public Builder mergeClient(com.project.booking.stubs.Client value) {
-      if (clientBuilder_ == null) {
-        if (client_ != null) {
-          client_ =
-            com.project.booking.stubs.Client.newBuilder(client_).mergeFrom(value).buildPartial();
-        } else {
-          client_ = value;
-        }
-        onChanged();
-      } else {
-        clientBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    public Builder clearClient() {
-      if (clientBuilder_ == null) {
-        client_ = null;
-        onChanged();
-      } else {
-        client_ = null;
-        clientBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    public com.project.booking.stubs.Client.Builder getClientBuilder() {
-      
-      onChanged();
-      return getClientFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    public com.project.booking.stubs.ClientOrBuilder getClientOrBuilder() {
-      if (clientBuilder_ != null) {
-        return clientBuilder_.getMessageOrBuilder();
-      } else {
-        return client_ == null ?
-            com.project.booking.stubs.Client.getDefaultInstance() : client_;
-      }
-    }
-    /**
-     * <code>.Client client = 4;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder> 
-        getClientFieldBuilder() {
-      if (clientBuilder_ == null) {
-        clientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder>(
-                getClient(),
-                getParentForChildren(),
-                isClean());
-        client_ = null;
-      }
-      return clientBuilder_;
-    }
-
     private com.project.booking.stubs.Chambre chambre_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.project.booking.stubs.Chambre, com.project.booking.stubs.Chambre.Builder, com.project.booking.stubs.ChambreOrBuilder> chambreBuilder_;
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      * @return Whether the chambre field is set.
      */
     public boolean hasChambre() {
       return chambreBuilder_ != null || chambre_ != null;
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      * @return The chambre.
      */
     public com.project.booking.stubs.Chambre getChambre() {
@@ -1047,7 +988,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     public Builder setChambre(com.project.booking.stubs.Chambre value) {
       if (chambreBuilder_ == null) {
@@ -1063,7 +1004,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     public Builder setChambre(
         com.project.booking.stubs.Chambre.Builder builderForValue) {
@@ -1077,7 +1018,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     public Builder mergeChambre(com.project.booking.stubs.Chambre value) {
       if (chambreBuilder_ == null) {
@@ -1095,7 +1036,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     public Builder clearChambre() {
       if (chambreBuilder_ == null) {
@@ -1109,7 +1050,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     public com.project.booking.stubs.Chambre.Builder getChambreBuilder() {
       
@@ -1117,7 +1058,7 @@ private static final long serialVersionUID = 0L;
       return getChambreFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     public com.project.booking.stubs.ChambreOrBuilder getChambreOrBuilder() {
       if (chambreBuilder_ != null) {
@@ -1128,7 +1069,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Chambre chambre = 5;</code>
+     * <code>.Chambre chambre = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.project.booking.stubs.Chambre, com.project.booking.stubs.Chambre.Builder, com.project.booking.stubs.ChambreOrBuilder> 
@@ -1144,123 +1085,435 @@ private static final long serialVersionUID = 0L;
       return chambreBuilder_;
     }
 
-    private com.project.booking.stubs.Preference preference_;
+    private com.project.booking.stubs.Client client_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder> preferenceBuilder_;
+        com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder> clientBuilder_;
     /**
-     * <code>.Preference preference = 6;</code>
-     * @return Whether the preference field is set.
+     * <code>.Client client = 5;</code>
+     * @return Whether the client field is set.
      */
-    public boolean hasPreference() {
-      return preferenceBuilder_ != null || preference_ != null;
+    public boolean hasClient() {
+      return clientBuilder_ != null || client_ != null;
     }
     /**
-     * <code>.Preference preference = 6;</code>
-     * @return The preference.
+     * <code>.Client client = 5;</code>
+     * @return The client.
      */
-    public com.project.booking.stubs.Preference getPreference() {
-      if (preferenceBuilder_ == null) {
-        return preference_ == null ? com.project.booking.stubs.Preference.getDefaultInstance() : preference_;
+    public com.project.booking.stubs.Client getClient() {
+      if (clientBuilder_ == null) {
+        return client_ == null ? com.project.booking.stubs.Client.getDefaultInstance() : client_;
       } else {
-        return preferenceBuilder_.getMessage();
+        return clientBuilder_.getMessage();
       }
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
-    public Builder setPreference(com.project.booking.stubs.Preference value) {
-      if (preferenceBuilder_ == null) {
+    public Builder setClient(com.project.booking.stubs.Client value) {
+      if (clientBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        preference_ = value;
+        client_ = value;
         onChanged();
       } else {
-        preferenceBuilder_.setMessage(value);
+        clientBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
-    public Builder setPreference(
-        com.project.booking.stubs.Preference.Builder builderForValue) {
-      if (preferenceBuilder_ == null) {
-        preference_ = builderForValue.build();
+    public Builder setClient(
+        com.project.booking.stubs.Client.Builder builderForValue) {
+      if (clientBuilder_ == null) {
+        client_ = builderForValue.build();
         onChanged();
       } else {
-        preferenceBuilder_.setMessage(builderForValue.build());
+        clientBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
-    public Builder mergePreference(com.project.booking.stubs.Preference value) {
-      if (preferenceBuilder_ == null) {
-        if (preference_ != null) {
-          preference_ =
-            com.project.booking.stubs.Preference.newBuilder(preference_).mergeFrom(value).buildPartial();
+    public Builder mergeClient(com.project.booking.stubs.Client value) {
+      if (clientBuilder_ == null) {
+        if (client_ != null) {
+          client_ =
+            com.project.booking.stubs.Client.newBuilder(client_).mergeFrom(value).buildPartial();
         } else {
-          preference_ = value;
+          client_ = value;
         }
         onChanged();
       } else {
-        preferenceBuilder_.mergeFrom(value);
+        clientBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
-    public Builder clearPreference() {
-      if (preferenceBuilder_ == null) {
-        preference_ = null;
+    public Builder clearClient() {
+      if (clientBuilder_ == null) {
+        client_ = null;
         onChanged();
       } else {
-        preference_ = null;
-        preferenceBuilder_ = null;
+        client_ = null;
+        clientBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
-    public com.project.booking.stubs.Preference.Builder getPreferenceBuilder() {
+    public com.project.booking.stubs.Client.Builder getClientBuilder() {
       
       onChanged();
-      return getPreferenceFieldBuilder().getBuilder();
+      return getClientFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
-    public com.project.booking.stubs.PreferenceOrBuilder getPreferenceOrBuilder() {
-      if (preferenceBuilder_ != null) {
-        return preferenceBuilder_.getMessageOrBuilder();
+    public com.project.booking.stubs.ClientOrBuilder getClientOrBuilder() {
+      if (clientBuilder_ != null) {
+        return clientBuilder_.getMessageOrBuilder();
       } else {
-        return preference_ == null ?
-            com.project.booking.stubs.Preference.getDefaultInstance() : preference_;
+        return client_ == null ?
+            com.project.booking.stubs.Client.getDefaultInstance() : client_;
       }
     }
     /**
-     * <code>.Preference preference = 6;</code>
+     * <code>.Client client = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder> 
-        getPreferenceFieldBuilder() {
-      if (preferenceBuilder_ == null) {
-        preferenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder>(
-                getPreference(),
+        com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder> 
+        getClientFieldBuilder() {
+      if (clientBuilder_ == null) {
+        clientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder>(
+                getClient(),
                 getParentForChildren(),
                 isClean());
-        preference_ = null;
+        client_ = null;
       }
-      return preferenceBuilder_;
+      return clientBuilder_;
+    }
+
+    private java.util.List<com.project.booking.stubs.Preference> preferences_ =
+      java.util.Collections.emptyList();
+    private void ensurePreferencesIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        preferences_ = new java.util.ArrayList<com.project.booking.stubs.Preference>(preferences_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder> preferencesBuilder_;
+
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public java.util.List<com.project.booking.stubs.Preference> getPreferencesList() {
+      if (preferencesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(preferences_);
+      } else {
+        return preferencesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public int getPreferencesCount() {
+      if (preferencesBuilder_ == null) {
+        return preferences_.size();
+      } else {
+        return preferencesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public com.project.booking.stubs.Preference getPreferences(int index) {
+      if (preferencesBuilder_ == null) {
+        return preferences_.get(index);
+      } else {
+        return preferencesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder setPreferences(
+        int index, com.project.booking.stubs.Preference value) {
+      if (preferencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePreferencesIsMutable();
+        preferences_.set(index, value);
+        onChanged();
+      } else {
+        preferencesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder setPreferences(
+        int index, com.project.booking.stubs.Preference.Builder builderForValue) {
+      if (preferencesBuilder_ == null) {
+        ensurePreferencesIsMutable();
+        preferences_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        preferencesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder addPreferences(com.project.booking.stubs.Preference value) {
+      if (preferencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePreferencesIsMutable();
+        preferences_.add(value);
+        onChanged();
+      } else {
+        preferencesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder addPreferences(
+        int index, com.project.booking.stubs.Preference value) {
+      if (preferencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePreferencesIsMutable();
+        preferences_.add(index, value);
+        onChanged();
+      } else {
+        preferencesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder addPreferences(
+        com.project.booking.stubs.Preference.Builder builderForValue) {
+      if (preferencesBuilder_ == null) {
+        ensurePreferencesIsMutable();
+        preferences_.add(builderForValue.build());
+        onChanged();
+      } else {
+        preferencesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder addPreferences(
+        int index, com.project.booking.stubs.Preference.Builder builderForValue) {
+      if (preferencesBuilder_ == null) {
+        ensurePreferencesIsMutable();
+        preferences_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        preferencesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder addAllPreferences(
+        java.lang.Iterable<? extends com.project.booking.stubs.Preference> values) {
+      if (preferencesBuilder_ == null) {
+        ensurePreferencesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, preferences_);
+        onChanged();
+      } else {
+        preferencesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder clearPreferences() {
+      if (preferencesBuilder_ == null) {
+        preferences_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        preferencesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public Builder removePreferences(int index) {
+      if (preferencesBuilder_ == null) {
+        ensurePreferencesIsMutable();
+        preferences_.remove(index);
+        onChanged();
+      } else {
+        preferencesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public com.project.booking.stubs.Preference.Builder getPreferencesBuilder(
+        int index) {
+      return getPreferencesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public com.project.booking.stubs.PreferenceOrBuilder getPreferencesOrBuilder(
+        int index) {
+      if (preferencesBuilder_ == null) {
+        return preferences_.get(index);  } else {
+        return preferencesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public java.util.List<? extends com.project.booking.stubs.PreferenceOrBuilder> 
+         getPreferencesOrBuilderList() {
+      if (preferencesBuilder_ != null) {
+        return preferencesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(preferences_);
+      }
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public com.project.booking.stubs.Preference.Builder addPreferencesBuilder() {
+      return getPreferencesFieldBuilder().addBuilder(
+          com.project.booking.stubs.Preference.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public com.project.booking.stubs.Preference.Builder addPreferencesBuilder(
+        int index) {
+      return getPreferencesFieldBuilder().addBuilder(
+          index, com.project.booking.stubs.Preference.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Champ repeated pour les préférences
+     * </pre>
+     *
+     * <code>repeated .Preference preferences = 6;</code>
+     */
+    public java.util.List<com.project.booking.stubs.Preference.Builder> 
+         getPreferencesBuilderList() {
+      return getPreferencesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder> 
+        getPreferencesFieldBuilder() {
+      if (preferencesBuilder_ == null) {
+        preferencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder>(
+                preferences_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        preferences_ = null;
+      }
+      return preferencesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
