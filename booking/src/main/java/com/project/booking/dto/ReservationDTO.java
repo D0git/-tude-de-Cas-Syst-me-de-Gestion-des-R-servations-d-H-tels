@@ -15,9 +15,10 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.List;
 
-
+@Data
 @Getter
 @Setter
+
 public class ReservationDTO {
 
     private Date dateDebut;
