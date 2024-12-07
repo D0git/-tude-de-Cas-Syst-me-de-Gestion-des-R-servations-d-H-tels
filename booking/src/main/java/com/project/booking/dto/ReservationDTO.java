@@ -1,5 +1,6 @@
 package com.project.booking.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.booking.entities.Chambre;
@@ -22,11 +23,12 @@ import java.util.List;
 
 public class ReservationDTO {
 
+
     @JsonProperty("date_debut")
-    private Date dateDebut;
+    private String dateDebut;
 
     @JsonProperty("date_fin")
-    private Date dateFin;
+    private String dateFin;
 
     @JsonProperty("client_id")
     private Long clientId;
