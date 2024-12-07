@@ -7,16 +7,18 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.jws.WebService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
 @WebService(serviceName = "ReservationWS")
-@RequiredArgsConstructor
+
 public class SoapService {
 
-    private final ReservationService reservationService;
+    @Autowired
+    private ReservationService reservationService;
 
     @WebMethod
     public List<Reservation> getReservation(){
