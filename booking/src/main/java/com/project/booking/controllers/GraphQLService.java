@@ -2,6 +2,8 @@ package com.project.booking.controllers;
 
 
 import com.project.booking.dto.ReservationDTO;
+import com.project.booking.entities.Chambre;
+import com.project.booking.entities.Preference;
 import com.project.booking.entities.Reservation;
 import com.project.booking.services.ReservationService;
 import lombok.RequiredArgsConstructor;
@@ -48,5 +50,17 @@ public class GraphQLService {
     public Reservation updateReservation(@Argument ReservationDTO reservationDTO, @Argument Long id) {
         return reservationService.updateReservation(reservationDTO, id);
     }
+
+    @QueryMapping
+    public List<Chambre> getAllChambres() {
+        return reservationService.getAllchambres();
+    }
+
+    @QueryMapping
+    public List<Preference> getAllPreferences(){
+        return reservationService.getAllPreferences();
+    }
+
+
 }
 

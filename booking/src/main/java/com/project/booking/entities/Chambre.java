@@ -23,5 +23,7 @@ public class Chambre {
     @Enumerated(EnumType.STRING)
     private TypeChambre type;
     private double prix;
+
+    @Column(nullable = false)
     private boolean disponible;
 }
