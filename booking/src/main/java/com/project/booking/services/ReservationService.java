@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -44,8 +45,8 @@ public class ReservationService {
     public Reservation saveReservation(ReservationDTO reservationDTO) {
         Reservation res = new Reservation();
 
-        res.setDateDebut(reservationDTO.getDateDebut());
-        res.setDateFin(reservationDTO.getDateFin());
+        res.setDateDebut(new Date(reservationDTO.getDateDebut()));
+        res.setDateFin(new Date(reservationDTO.getDateFin()));
         res.setClient(clientRepository.findById(reservationDTO.getClientId()).get());
         res.setChambre(chambreRepository.findById(reservationDTO.getChambreId()).get());
 
@@ -60,8 +61,8 @@ public class ReservationService {
     public Reservation updateReservation(ReservationDTO reservationDTO, Long id) {
         Reservation res = reservationRepository.findById(id).get();
 
-        if(reservationDTO.getDateDebut()!= null) res.setDateDebut(reservationDTO.getDateDebut());
-        if(reservationDTO.getDateFin()!= null) res.setDateFin(reservationDTO.getDateFin());
+        if(reservationDTO.getDateDebut()!= null)  res.setDateDebut(new Date(reservationDTO.getDateDebut()));
+        if(reservationDTO.getDateFin()!= null) res.setDateFin(new Date(reservationDTO.getDateFin()));
         if(reservationDTO.getChambreId()!= null) res.setChambre(chambreRepository.findById(reservationDTO.getChambreId()).get());
         if(!reservationDTO.getPreferences().isEmpty()) {
             List<Preference> p = new ArrayList<Preference>();
