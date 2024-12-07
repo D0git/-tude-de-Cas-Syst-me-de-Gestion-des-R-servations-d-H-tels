@@ -1,6 +1,7 @@
 package com.project.booking.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.booking.entities.Chambre;
 import com.project.booking.entities.Client;
 import com.project.booking.entities.Preference;
@@ -21,13 +22,18 @@ import java.util.List;
 
 public class ReservationDTO {
 
+    @JsonProperty("date_debut")
     private Date dateDebut;
 
+    @JsonProperty("date_fin")
     private Date dateFin;
 
+    @JsonProperty("client_id")
     private Long clientId;
 
+    @JsonProperty("chambre_id")
     private Long chambreId;
 
+    @JsonProperty("preferences")
     private List<PreferenceDTO> preferences;
 }
