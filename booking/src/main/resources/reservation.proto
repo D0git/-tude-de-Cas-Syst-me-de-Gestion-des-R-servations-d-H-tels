@@ -42,6 +42,21 @@ message Reservation {
   Preference preference = 6;
 }
 
+// Requete pour obtenir tous les chambres
+message getAllchambresRequest{}
+// Réponse contenant la liste des chambres
+message getAllchambresResponse {
+  repeated Chambre chambres = 1;
+}
+
+// Requete pour obtenir tous les preferences
+message getAllPreferencesRequest{}
+// Réponse contenant la liste des preferences
+message getAllPreferencesResponse {
+  repeated Preference preferences = 1;
+}
+
+
 // Requete pour obtenir tous les reservations
 message getAllReservationsRequest{}
 // Réponse contenant la liste des reservations
