@@ -1,6 +1,8 @@
 package com.project.booking.controllers;
 
 import com.project.booking.dto.ReservationDTO;
+import com.project.booking.entities.Chambre;
+import com.project.booking.entities.Preference;
 import com.project.booking.entities.Reservation;
 import com.project.booking.services.ReservationService;
 import jakarta.jws.WebMethod;
@@ -21,7 +23,7 @@ public class SoapService {
     private ReservationService reservationService;
 
     @WebMethod
-    public List<Reservation> getReservation(){
+    public List<Reservation> getAllReservations(){
         return reservationService.findAllReservations();
     }
 
@@ -43,6 +45,15 @@ public class SoapService {
     @WebMethod
     public boolean deleteReservationById(@WebParam(name = "id") Long id){
         return reservationService.deleteReservation(id);
+    }
+
+    @WebMethod
+    public List<Chambre> getAllChambre(){
+        return reservationService.getAllchambres();
+    }
+    @WebMethod
+    public List<Preference> getAllPreference(){
+        return reservationService.getAllPreferences();
     }
 
 }

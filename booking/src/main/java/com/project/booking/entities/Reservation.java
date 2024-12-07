@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlList;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.*;
 
@@ -36,7 +37,7 @@ public class Reservation {
     @JsonIgnoreProperties("reservation")
     private Chambre chambre;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "reservation_preferences",
             joinColumns = @JoinColumn(name = "reservation_id"),
