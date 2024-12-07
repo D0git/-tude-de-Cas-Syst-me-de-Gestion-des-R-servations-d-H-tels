@@ -5,6 +5,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.*;
 
 @Entity
@@ -13,6 +16,8 @@ import lombok.*;
 @Data
 @Getter
 @Setter
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Client {
 
     @Id
