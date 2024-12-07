@@ -1,9 +1,9 @@
 package com.project.booking.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.*;
 
 @Entity
@@ -12,12 +12,15 @@ import lombok.*;
 @Data
 @Getter
 @Setter
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Chambre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     private TypeChambre type;
     private double prix;
     private boolean disponible;
