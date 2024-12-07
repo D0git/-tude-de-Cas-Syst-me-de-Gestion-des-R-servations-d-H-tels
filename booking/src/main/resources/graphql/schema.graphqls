@@ -22,10 +22,11 @@ type Client {
 # Chambre Type
 type Chambre {
     id: ID
-    numero: Int
+  #  numero: Int
     type: String
     prix: Float
-    reservations: [Reservation]
+    disponible: Boolean
+
 }
 
 # Preference Type
@@ -55,6 +56,12 @@ type Query {
 
     # Fetch a specific reservation by ID
     findReservationById(id: ID): Reservation
+
+    # Query to fetch all chambres
+    getAllChambres: [Chambre]
+
+    # Query to fetch all preferences
+    getAllPreferences: [Preference]
 }
 
 # Mutations
