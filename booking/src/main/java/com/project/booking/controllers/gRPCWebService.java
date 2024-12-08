@@ -284,18 +284,15 @@ public class gRPCWebService extends ReservationServiceGrpc.ReservationServiceImp
     public void updateReservation(updateReservationRequest request, StreamObserver<updateReservationResponse> responseObserver) {
         try {
             // Convertir la demande gRPC en DTO
+            System.out.println(request.getReservation().toString());
             ReservationDTO reservationDTO = new ReservationDTO();
             reservationDTO.setDateDebut(request.getReservation().getDateDebut());
             reservationDTO.setDateFin(request.getReservation().getDateFin());
             reservationDTO.setClientId(request.getReservation().getClientId());
             reservationDTO.setChambreId(request.getReservation().getChambreId());
-            reservationDTO.setPreferences(request.getReservation().getPreferencesList().stream()
-                    .map(pref -> new PreferenceDTO(pref.getNom()))  // Assurez-vous que PreferenceDTO accepte une String ou autre type attendu
-                    .collect(Collectors.toList()));
-
             request.getReservation().getPreferencesList().forEach(pref ->{
-                com.project.booking.dto.PreferenceDTO pre = new com.project.booking.entities.Preference();
-                pre.setNom(pref.getNom());
+                com.project.booking.dto.PreferenceDTO pre = new com.project.booking.dto.PreferenceDTO(pref.getNom());
+
                 reservationDTO.getPreferences().add(pre);
             });
             // Appeler la méthode updateReservation du service
