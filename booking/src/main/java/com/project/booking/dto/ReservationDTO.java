@@ -14,6 +14,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -37,5 +38,5 @@ public class ReservationDTO {
     private Long chambreId;
 
     @JsonProperty("preferences")
-    private List<PreferenceDTO> preferences;
+    private List<PreferenceDTO> preferences = new ArrayList<>();
 }
