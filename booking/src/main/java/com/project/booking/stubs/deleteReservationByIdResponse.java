@@ -53,11 +53,11 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            com.project.booking.stubs.DeleteCompteResult.Builder subBuilder = null;
+            com.project.booking.stubs.DeleteReservationResult.Builder subBuilder = null;
             if (deleted_ != null) {
               subBuilder = deleted_.toBuilder();
             }
-            deleted_ = input.readMessage(com.project.booking.stubs.DeleteCompteResult.parser(), extensionRegistry);
+            deleted_ = input.readMessage(com.project.booking.stubs.DeleteReservationResult.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(deleted_);
               deleted_ = subBuilder.buildPartial();
@@ -98,25 +98,25 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DELETED_FIELD_NUMBER = 1;
-  private com.project.booking.stubs.DeleteCompteResult deleted_;
+  private com.project.booking.stubs.DeleteReservationResult deleted_;
   /**
-   * <code>.DeleteCompteResult deleted = 1;</code>
+   * <code>.DeleteReservationResult deleted = 1;</code>
    * @return Whether the deleted field is set.
    */
   public boolean hasDeleted() {
     return deleted_ != null;
   }
   /**
-   * <code>.DeleteCompteResult deleted = 1;</code>
+   * <code>.DeleteReservationResult deleted = 1;</code>
    * @return The deleted.
    */
-  public com.project.booking.stubs.DeleteCompteResult getDeleted() {
-    return deleted_ == null ? com.project.booking.stubs.DeleteCompteResult.getDefaultInstance() : deleted_;
+  public com.project.booking.stubs.DeleteReservationResult getDeleted() {
+    return deleted_ == null ? com.project.booking.stubs.DeleteReservationResult.getDefaultInstance() : deleted_;
   }
   /**
-   * <code>.DeleteCompteResult deleted = 1;</code>
+   * <code>.DeleteReservationResult deleted = 1;</code>
    */
-  public com.project.booking.stubs.DeleteCompteResultOrBuilder getDeletedOrBuilder() {
+  public com.project.booking.stubs.DeleteReservationResultOrBuilder getDeletedOrBuilder() {
     return getDeleted();
   }
 
@@ -439,31 +439,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.project.booking.stubs.DeleteCompteResult deleted_;
+    private com.project.booking.stubs.DeleteReservationResult deleted_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.DeleteCompteResult, com.project.booking.stubs.DeleteCompteResult.Builder, com.project.booking.stubs.DeleteCompteResultOrBuilder> deletedBuilder_;
+        com.project.booking.stubs.DeleteReservationResult, com.project.booking.stubs.DeleteReservationResult.Builder, com.project.booking.stubs.DeleteReservationResultOrBuilder> deletedBuilder_;
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      * @return Whether the deleted field is set.
      */
     public boolean hasDeleted() {
       return deletedBuilder_ != null || deleted_ != null;
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      * @return The deleted.
      */
-    public com.project.booking.stubs.DeleteCompteResult getDeleted() {
+    public com.project.booking.stubs.DeleteReservationResult getDeleted() {
       if (deletedBuilder_ == null) {
-        return deleted_ == null ? com.project.booking.stubs.DeleteCompteResult.getDefaultInstance() : deleted_;
+        return deleted_ == null ? com.project.booking.stubs.DeleteReservationResult.getDefaultInstance() : deleted_;
       } else {
         return deletedBuilder_.getMessage();
       }
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
-    public Builder setDeleted(com.project.booking.stubs.DeleteCompteResult value) {
+    public Builder setDeleted(com.project.booking.stubs.DeleteReservationResult value) {
       if (deletedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -477,10 +477,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
     public Builder setDeleted(
-        com.project.booking.stubs.DeleteCompteResult.Builder builderForValue) {
+        com.project.booking.stubs.DeleteReservationResult.Builder builderForValue) {
       if (deletedBuilder_ == null) {
         deleted_ = builderForValue.build();
         onChanged();
@@ -491,13 +491,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
-    public Builder mergeDeleted(com.project.booking.stubs.DeleteCompteResult value) {
+    public Builder mergeDeleted(com.project.booking.stubs.DeleteReservationResult value) {
       if (deletedBuilder_ == null) {
         if (deleted_ != null) {
           deleted_ =
-            com.project.booking.stubs.DeleteCompteResult.newBuilder(deleted_).mergeFrom(value).buildPartial();
+            com.project.booking.stubs.DeleteReservationResult.newBuilder(deleted_).mergeFrom(value).buildPartial();
         } else {
           deleted_ = value;
         }
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
     public Builder clearDeleted() {
       if (deletedBuilder_ == null) {
@@ -523,33 +523,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
-    public com.project.booking.stubs.DeleteCompteResult.Builder getDeletedBuilder() {
+    public com.project.booking.stubs.DeleteReservationResult.Builder getDeletedBuilder() {
       
       onChanged();
       return getDeletedFieldBuilder().getBuilder();
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
-    public com.project.booking.stubs.DeleteCompteResultOrBuilder getDeletedOrBuilder() {
+    public com.project.booking.stubs.DeleteReservationResultOrBuilder getDeletedOrBuilder() {
       if (deletedBuilder_ != null) {
         return deletedBuilder_.getMessageOrBuilder();
       } else {
         return deleted_ == null ?
-            com.project.booking.stubs.DeleteCompteResult.getDefaultInstance() : deleted_;
+            com.project.booking.stubs.DeleteReservationResult.getDefaultInstance() : deleted_;
       }
     }
     /**
-     * <code>.DeleteCompteResult deleted = 1;</code>
+     * <code>.DeleteReservationResult deleted = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.DeleteCompteResult, com.project.booking.stubs.DeleteCompteResult.Builder, com.project.booking.stubs.DeleteCompteResultOrBuilder> 
+        com.project.booking.stubs.DeleteReservationResult, com.project.booking.stubs.DeleteReservationResult.Builder, com.project.booking.stubs.DeleteReservationResultOrBuilder> 
         getDeletedFieldBuilder() {
       if (deletedBuilder_ == null) {
         deletedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.project.booking.stubs.DeleteCompteResult, com.project.booking.stubs.DeleteCompteResult.Builder, com.project.booking.stubs.DeleteCompteResultOrBuilder>(
+            com.project.booking.stubs.DeleteReservationResult, com.project.booking.stubs.DeleteReservationResult.Builder, com.project.booking.stubs.DeleteReservationResultOrBuilder>(
                 getDeleted(),
                 getParentForChildren(),
                 isClean());

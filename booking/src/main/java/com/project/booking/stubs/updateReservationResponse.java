@@ -5,28 +5,28 @@ package com.project.booking.stubs;
 
 /**
  * <pre>
- * Réponse contenant la liste des reservations
+ * Réponse contenant la reservation modifiée
  * </pre>
  *
- * Protobuf type {@code getReservationByIdResponse}
+ * Protobuf type {@code updateReservationResponse}
  */
-public  final class getReservationByIdResponse extends
+public  final class updateReservationResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:getReservationByIdResponse)
-    getReservationByIdResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:updateReservationResponse)
+    updateReservationResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use getReservationByIdResponse.newBuilder() to construct.
-  private getReservationByIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use updateReservationResponse.newBuilder() to construct.
+  private updateReservationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private getReservationByIdResponse() {
+  private updateReservationResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new getReservationByIdResponse();
+    return new updateReservationResponse();
   }
 
   @java.lang.Override
@@ -34,7 +34,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private getReservationByIdResponse(
+  private updateReservationResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -86,15 +86,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_getReservationByIdResponse_descriptor;
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_updateReservationResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_getReservationByIdResponse_fieldAccessorTable
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_updateReservationResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.project.booking.stubs.getReservationByIdResponse.class, com.project.booking.stubs.getReservationByIdResponse.Builder.class);
+            com.project.booking.stubs.updateReservationResponse.class, com.project.booking.stubs.updateReservationResponse.Builder.class);
   }
 
   public static final int RESERVATION_FIELD_NUMBER = 1;
@@ -160,10 +160,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.project.booking.stubs.getReservationByIdResponse)) {
+    if (!(obj instanceof com.project.booking.stubs.updateReservationResponse)) {
       return super.equals(obj);
     }
-    com.project.booking.stubs.getReservationByIdResponse other = (com.project.booking.stubs.getReservationByIdResponse) obj;
+    com.project.booking.stubs.updateReservationResponse other = (com.project.booking.stubs.updateReservationResponse) obj;
 
     if (hasReservation() != other.hasReservation()) return false;
     if (hasReservation()) {
@@ -190,69 +190,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(byte[] data)
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.updateReservationResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseDelimitedFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.getReservationByIdResponse parseFrom(
+  public static com.project.booking.stubs.updateReservationResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.project.booking.stubs.getReservationByIdResponse prototype) {
+  public static Builder newBuilder(com.project.booking.stubs.updateReservationResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -282,29 +282,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Réponse contenant la liste des reservations
+   * Réponse contenant la reservation modifiée
    * </pre>
    *
-   * Protobuf type {@code getReservationByIdResponse}
+   * Protobuf type {@code updateReservationResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:getReservationByIdResponse)
-      com.project.booking.stubs.getReservationByIdResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:updateReservationResponse)
+      com.project.booking.stubs.updateReservationResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_getReservationByIdResponse_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_updateReservationResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_getReservationByIdResponse_fieldAccessorTable
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_updateReservationResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.project.booking.stubs.getReservationByIdResponse.class, com.project.booking.stubs.getReservationByIdResponse.Builder.class);
+              com.project.booking.stubs.updateReservationResponse.class, com.project.booking.stubs.updateReservationResponse.Builder.class);
     }
 
-    // Construct using com.project.booking.stubs.getReservationByIdResponse.newBuilder()
+    // Construct using com.project.booking.stubs.updateReservationResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -334,17 +334,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_getReservationByIdResponse_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_updateReservationResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.getReservationByIdResponse getDefaultInstanceForType() {
-      return com.project.booking.stubs.getReservationByIdResponse.getDefaultInstance();
+    public com.project.booking.stubs.updateReservationResponse getDefaultInstanceForType() {
+      return com.project.booking.stubs.updateReservationResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.getReservationByIdResponse build() {
-      com.project.booking.stubs.getReservationByIdResponse result = buildPartial();
+    public com.project.booking.stubs.updateReservationResponse build() {
+      com.project.booking.stubs.updateReservationResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -352,8 +352,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.getReservationByIdResponse buildPartial() {
-      com.project.booking.stubs.getReservationByIdResponse result = new com.project.booking.stubs.getReservationByIdResponse(this);
+    public com.project.booking.stubs.updateReservationResponse buildPartial() {
+      com.project.booking.stubs.updateReservationResponse result = new com.project.booking.stubs.updateReservationResponse(this);
       if (reservationBuilder_ == null) {
         result.reservation_ = reservation_;
       } else {
@@ -397,16 +397,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.project.booking.stubs.getReservationByIdResponse) {
-        return mergeFrom((com.project.booking.stubs.getReservationByIdResponse)other);
+      if (other instanceof com.project.booking.stubs.updateReservationResponse) {
+        return mergeFrom((com.project.booking.stubs.updateReservationResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.project.booking.stubs.getReservationByIdResponse other) {
-      if (other == com.project.booking.stubs.getReservationByIdResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.project.booking.stubs.updateReservationResponse other) {
+      if (other == com.project.booking.stubs.updateReservationResponse.getDefaultInstance()) return this;
       if (other.hasReservation()) {
         mergeReservation(other.getReservation());
       }
@@ -425,11 +425,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.project.booking.stubs.getReservationByIdResponse parsedMessage = null;
+      com.project.booking.stubs.updateReservationResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.project.booking.stubs.getReservationByIdResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.project.booking.stubs.updateReservationResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -570,41 +570,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:getReservationByIdResponse)
+    // @@protoc_insertion_point(builder_scope:updateReservationResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:getReservationByIdResponse)
-  private static final com.project.booking.stubs.getReservationByIdResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:updateReservationResponse)
+  private static final com.project.booking.stubs.updateReservationResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.project.booking.stubs.getReservationByIdResponse();
+    DEFAULT_INSTANCE = new com.project.booking.stubs.updateReservationResponse();
   }
 
-  public static com.project.booking.stubs.getReservationByIdResponse getDefaultInstance() {
+  public static com.project.booking.stubs.updateReservationResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<getReservationByIdResponse>
-      PARSER = new com.google.protobuf.AbstractParser<getReservationByIdResponse>() {
+  private static final com.google.protobuf.Parser<updateReservationResponse>
+      PARSER = new com.google.protobuf.AbstractParser<updateReservationResponse>() {
     @java.lang.Override
-    public getReservationByIdResponse parsePartialFrom(
+    public updateReservationResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new getReservationByIdResponse(input, extensionRegistry);
+      return new updateReservationResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<getReservationByIdResponse> parser() {
+  public static com.google.protobuf.Parser<updateReservationResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<getReservationByIdResponse> getParserForType() {
+  public com.google.protobuf.Parser<updateReservationResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.project.booking.stubs.getReservationByIdResponse getDefaultInstanceForType() {
+  public com.project.booking.stubs.updateReservationResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

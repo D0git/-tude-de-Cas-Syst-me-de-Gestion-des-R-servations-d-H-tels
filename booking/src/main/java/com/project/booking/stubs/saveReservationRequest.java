@@ -5,7 +5,7 @@ package com.project.booking.stubs;
 
 /**
  * <pre>
- * Requête pour ajouter/modifier une reservation
+ * Requête pour ajouter une reservation
  * </pre>
  *
  * Protobuf type {@code saveReservationRequest}
@@ -53,11 +53,11 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            com.project.booking.stubs.Reservation.Builder subBuilder = null;
+            com.project.booking.stubs.ReservationDTO.Builder subBuilder = null;
             if (reservation_ != null) {
               subBuilder = reservation_.toBuilder();
             }
-            reservation_ = input.readMessage(com.project.booking.stubs.Reservation.parser(), extensionRegistry);
+            reservation_ = input.readMessage(com.project.booking.stubs.ReservationDTO.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(reservation_);
               reservation_ = subBuilder.buildPartial();
@@ -98,25 +98,25 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESERVATION_FIELD_NUMBER = 1;
-  private com.project.booking.stubs.Reservation reservation_;
+  private com.project.booking.stubs.ReservationDTO reservation_;
   /**
-   * <code>.Reservation reservation = 1;</code>
+   * <code>.ReservationDTO reservation = 1;</code>
    * @return Whether the reservation field is set.
    */
   public boolean hasReservation() {
     return reservation_ != null;
   }
   /**
-   * <code>.Reservation reservation = 1;</code>
+   * <code>.ReservationDTO reservation = 1;</code>
    * @return The reservation.
    */
-  public com.project.booking.stubs.Reservation getReservation() {
-    return reservation_ == null ? com.project.booking.stubs.Reservation.getDefaultInstance() : reservation_;
+  public com.project.booking.stubs.ReservationDTO getReservation() {
+    return reservation_ == null ? com.project.booking.stubs.ReservationDTO.getDefaultInstance() : reservation_;
   }
   /**
-   * <code>.Reservation reservation = 1;</code>
+   * <code>.ReservationDTO reservation = 1;</code>
    */
-  public com.project.booking.stubs.ReservationOrBuilder getReservationOrBuilder() {
+  public com.project.booking.stubs.ReservationDTOOrBuilder getReservationOrBuilder() {
     return getReservation();
   }
 
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requête pour ajouter/modifier une reservation
+   * Requête pour ajouter une reservation
    * </pre>
    *
    * Protobuf type {@code saveReservationRequest}
@@ -439,31 +439,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.project.booking.stubs.Reservation reservation_;
+    private com.project.booking.stubs.ReservationDTO reservation_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Reservation, com.project.booking.stubs.Reservation.Builder, com.project.booking.stubs.ReservationOrBuilder> reservationBuilder_;
+        com.project.booking.stubs.ReservationDTO, com.project.booking.stubs.ReservationDTO.Builder, com.project.booking.stubs.ReservationDTOOrBuilder> reservationBuilder_;
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      * @return Whether the reservation field is set.
      */
     public boolean hasReservation() {
       return reservationBuilder_ != null || reservation_ != null;
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      * @return The reservation.
      */
-    public com.project.booking.stubs.Reservation getReservation() {
+    public com.project.booking.stubs.ReservationDTO getReservation() {
       if (reservationBuilder_ == null) {
-        return reservation_ == null ? com.project.booking.stubs.Reservation.getDefaultInstance() : reservation_;
+        return reservation_ == null ? com.project.booking.stubs.ReservationDTO.getDefaultInstance() : reservation_;
       } else {
         return reservationBuilder_.getMessage();
       }
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
-    public Builder setReservation(com.project.booking.stubs.Reservation value) {
+    public Builder setReservation(com.project.booking.stubs.ReservationDTO value) {
       if (reservationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -477,10 +477,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
     public Builder setReservation(
-        com.project.booking.stubs.Reservation.Builder builderForValue) {
+        com.project.booking.stubs.ReservationDTO.Builder builderForValue) {
       if (reservationBuilder_ == null) {
         reservation_ = builderForValue.build();
         onChanged();
@@ -491,13 +491,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
-    public Builder mergeReservation(com.project.booking.stubs.Reservation value) {
+    public Builder mergeReservation(com.project.booking.stubs.ReservationDTO value) {
       if (reservationBuilder_ == null) {
         if (reservation_ != null) {
           reservation_ =
-            com.project.booking.stubs.Reservation.newBuilder(reservation_).mergeFrom(value).buildPartial();
+            com.project.booking.stubs.ReservationDTO.newBuilder(reservation_).mergeFrom(value).buildPartial();
         } else {
           reservation_ = value;
         }
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
     public Builder clearReservation() {
       if (reservationBuilder_ == null) {
@@ -523,33 +523,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
-    public com.project.booking.stubs.Reservation.Builder getReservationBuilder() {
+    public com.project.booking.stubs.ReservationDTO.Builder getReservationBuilder() {
       
       onChanged();
       return getReservationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
-    public com.project.booking.stubs.ReservationOrBuilder getReservationOrBuilder() {
+    public com.project.booking.stubs.ReservationDTOOrBuilder getReservationOrBuilder() {
       if (reservationBuilder_ != null) {
         return reservationBuilder_.getMessageOrBuilder();
       } else {
         return reservation_ == null ?
-            com.project.booking.stubs.Reservation.getDefaultInstance() : reservation_;
+            com.project.booking.stubs.ReservationDTO.getDefaultInstance() : reservation_;
       }
     }
     /**
-     * <code>.Reservation reservation = 1;</code>
+     * <code>.ReservationDTO reservation = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Reservation, com.project.booking.stubs.Reservation.Builder, com.project.booking.stubs.ReservationOrBuilder> 
+        com.project.booking.stubs.ReservationDTO, com.project.booking.stubs.ReservationDTO.Builder, com.project.booking.stubs.ReservationDTOOrBuilder> 
         getReservationFieldBuilder() {
       if (reservationBuilder_ == null) {
         reservationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.project.booking.stubs.Reservation, com.project.booking.stubs.Reservation.Builder, com.project.booking.stubs.ReservationOrBuilder>(
+            com.project.booking.stubs.ReservationDTO, com.project.booking.stubs.ReservationDTO.Builder, com.project.booking.stubs.ReservationDTOOrBuilder>(
                 getReservation(),
                 getParentForChildren(),
                 isClean());

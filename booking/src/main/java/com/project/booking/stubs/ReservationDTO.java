@@ -8,18 +8,18 @@ package com.project.booking.stubs;
  * Message représentant une reservation
  * </pre>
  *
- * Protobuf type {@code Reservation}
+ * Protobuf type {@code ReservationDTO}
  */
-public  final class Reservation extends
+public  final class ReservationDTO extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Reservation)
-    ReservationOrBuilder {
+    // @@protoc_insertion_point(message_implements:ReservationDTO)
+    ReservationDTOOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Reservation.newBuilder() to construct.
-  private Reservation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ReservationDTO.newBuilder() to construct.
+  private ReservationDTO(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Reservation() {
+  private ReservationDTO() {
     dateDebut_ = "";
     dateFin_ = "";
     preferences_ = java.util.Collections.emptyList();
@@ -29,7 +29,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Reservation();
+    return new ReservationDTO();
   }
 
   @java.lang.Override
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Reservation(
+  private ReservationDTO(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -56,56 +56,35 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-
-            id_ = input.readInt64();
-            break;
-          }
-          case 18: {
+          case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
             dateDebut_ = s;
             break;
           }
-          case 26: {
+          case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
             dateFin_ = s;
             break;
           }
-          case 34: {
-            com.project.booking.stubs.Chambre.Builder subBuilder = null;
-            if (chambre_ != null) {
-              subBuilder = chambre_.toBuilder();
-            }
-            chambre_ = input.readMessage(com.project.booking.stubs.Chambre.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(chambre_);
-              chambre_ = subBuilder.buildPartial();
-            }
+          case 24: {
 
+            chambreId_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            clientId_ = input.readInt64();
             break;
           }
           case 42: {
-            com.project.booking.stubs.Client.Builder subBuilder = null;
-            if (client_ != null) {
-              subBuilder = client_.toBuilder();
-            }
-            client_ = input.readMessage(com.project.booking.stubs.Client.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(client_);
-              client_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              preferences_ = new java.util.ArrayList<com.project.booking.stubs.Preference>();
+              preferences_ = new java.util.ArrayList<com.project.booking.stubs.PreferenceDTO>();
               mutable_bitField0_ |= 0x00000001;
             }
             preferences_.add(
-                input.readMessage(com.project.booking.stubs.Preference.parser(), extensionRegistry));
+                input.readMessage(com.project.booking.stubs.PreferenceDTO.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -132,31 +111,21 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_Reservation_descriptor;
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_ReservationDTO_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_Reservation_fieldAccessorTable
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_ReservationDTO_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.project.booking.stubs.Reservation.class, com.project.booking.stubs.Reservation.Builder.class);
+            com.project.booking.stubs.ReservationDTO.class, com.project.booking.stubs.ReservationDTO.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
-  private long id_;
-  /**
-   * <code>int64 id = 1;</code>
-   * @return The id.
-   */
-  public long getId() {
-    return id_;
-  }
-
-  public static final int DATEDEBUT_FIELD_NUMBER = 2;
+  public static final int DATEDEBUT_FIELD_NUMBER = 1;
   private volatile java.lang.Object dateDebut_;
   /**
-   * <code>string dateDebut = 2;</code>
+   * <code>string dateDebut = 1;</code>
    * @return The dateDebut.
    */
   public java.lang.String getDateDebut() {
@@ -172,7 +141,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string dateDebut = 2;</code>
+   * <code>string dateDebut = 1;</code>
    * @return The bytes for dateDebut.
    */
   public com.google.protobuf.ByteString
@@ -189,10 +158,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DATEFIN_FIELD_NUMBER = 3;
+  public static final int DATEFIN_FIELD_NUMBER = 2;
   private volatile java.lang.Object dateFin_;
   /**
-   * <code>string dateFin = 3;</code>
+   * <code>string dateFin = 2;</code>
    * @return The dateFin.
    */
   public java.lang.String getDateFin() {
@@ -208,7 +177,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string dateFin = 3;</code>
+   * <code>string dateFin = 2;</code>
    * @return The bytes for dateFin.
    */
   public com.google.protobuf.ByteString
@@ -225,62 +194,36 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CHAMBRE_FIELD_NUMBER = 4;
-  private com.project.booking.stubs.Chambre chambre_;
+  public static final int CHAMBREID_FIELD_NUMBER = 3;
+  private long chambreId_;
   /**
-   * <code>.Chambre chambre = 4;</code>
-   * @return Whether the chambre field is set.
+   * <code>int64 chambreId = 3;</code>
+   * @return The chambreId.
    */
-  public boolean hasChambre() {
-    return chambre_ != null;
-  }
-  /**
-   * <code>.Chambre chambre = 4;</code>
-   * @return The chambre.
-   */
-  public com.project.booking.stubs.Chambre getChambre() {
-    return chambre_ == null ? com.project.booking.stubs.Chambre.getDefaultInstance() : chambre_;
-  }
-  /**
-   * <code>.Chambre chambre = 4;</code>
-   */
-  public com.project.booking.stubs.ChambreOrBuilder getChambreOrBuilder() {
-    return getChambre();
+  public long getChambreId() {
+    return chambreId_;
   }
 
-  public static final int CLIENT_FIELD_NUMBER = 5;
-  private com.project.booking.stubs.Client client_;
+  public static final int CLIENTID_FIELD_NUMBER = 4;
+  private long clientId_;
   /**
-   * <code>.Client client = 5;</code>
-   * @return Whether the client field is set.
+   * <code>int64 clientId = 4;</code>
+   * @return The clientId.
    */
-  public boolean hasClient() {
-    return client_ != null;
-  }
-  /**
-   * <code>.Client client = 5;</code>
-   * @return The client.
-   */
-  public com.project.booking.stubs.Client getClient() {
-    return client_ == null ? com.project.booking.stubs.Client.getDefaultInstance() : client_;
-  }
-  /**
-   * <code>.Client client = 5;</code>
-   */
-  public com.project.booking.stubs.ClientOrBuilder getClientOrBuilder() {
-    return getClient();
+  public long getClientId() {
+    return clientId_;
   }
 
-  public static final int PREFERENCES_FIELD_NUMBER = 6;
-  private java.util.List<com.project.booking.stubs.Preference> preferences_;
+  public static final int PREFERENCES_FIELD_NUMBER = 5;
+  private java.util.List<com.project.booking.stubs.PreferenceDTO> preferences_;
   /**
    * <pre>
    * Champ repeated pour les préférences
    * </pre>
    *
-   * <code>repeated .Preference preferences = 6;</code>
+   * <code>repeated .PreferenceDTO preferences = 5;</code>
    */
-  public java.util.List<com.project.booking.stubs.Preference> getPreferencesList() {
+  public java.util.List<com.project.booking.stubs.PreferenceDTO> getPreferencesList() {
     return preferences_;
   }
   /**
@@ -288,9 +231,9 @@ private static final long serialVersionUID = 0L;
    * Champ repeated pour les préférences
    * </pre>
    *
-   * <code>repeated .Preference preferences = 6;</code>
+   * <code>repeated .PreferenceDTO preferences = 5;</code>
    */
-  public java.util.List<? extends com.project.booking.stubs.PreferenceOrBuilder> 
+  public java.util.List<? extends com.project.booking.stubs.PreferenceDTOOrBuilder> 
       getPreferencesOrBuilderList() {
     return preferences_;
   }
@@ -299,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * Champ repeated pour les préférences
    * </pre>
    *
-   * <code>repeated .Preference preferences = 6;</code>
+   * <code>repeated .PreferenceDTO preferences = 5;</code>
    */
   public int getPreferencesCount() {
     return preferences_.size();
@@ -309,9 +252,9 @@ private static final long serialVersionUID = 0L;
    * Champ repeated pour les préférences
    * </pre>
    *
-   * <code>repeated .Preference preferences = 6;</code>
+   * <code>repeated .PreferenceDTO preferences = 5;</code>
    */
-  public com.project.booking.stubs.Preference getPreferences(int index) {
+  public com.project.booking.stubs.PreferenceDTO getPreferences(int index) {
     return preferences_.get(index);
   }
   /**
@@ -319,9 +262,9 @@ private static final long serialVersionUID = 0L;
    * Champ repeated pour les préférences
    * </pre>
    *
-   * <code>repeated .Preference preferences = 6;</code>
+   * <code>repeated .PreferenceDTO preferences = 5;</code>
    */
-  public com.project.booking.stubs.PreferenceOrBuilder getPreferencesOrBuilder(
+  public com.project.booking.stubs.PreferenceDTOOrBuilder getPreferencesOrBuilder(
       int index) {
     return preferences_.get(index);
   }
@@ -340,23 +283,20 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (id_ != 0L) {
-      output.writeInt64(1, id_);
-    }
     if (!getDateDebutBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dateDebut_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dateDebut_);
     }
     if (!getDateFinBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dateFin_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dateFin_);
     }
-    if (chambre_ != null) {
-      output.writeMessage(4, getChambre());
+    if (chambreId_ != 0L) {
+      output.writeInt64(3, chambreId_);
     }
-    if (client_ != null) {
-      output.writeMessage(5, getClient());
+    if (clientId_ != 0L) {
+      output.writeInt64(4, clientId_);
     }
     for (int i = 0; i < preferences_.size(); i++) {
-      output.writeMessage(6, preferences_.get(i));
+      output.writeMessage(5, preferences_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -367,27 +307,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (id_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, id_);
-    }
     if (!getDateDebutBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dateDebut_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dateDebut_);
     }
     if (!getDateFinBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dateFin_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dateFin_);
     }
-    if (chambre_ != null) {
+    if (chambreId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getChambre());
+        .computeInt64Size(3, chambreId_);
     }
-    if (client_ != null) {
+    if (clientId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getClient());
+        .computeInt64Size(4, clientId_);
     }
     for (int i = 0; i < preferences_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, preferences_.get(i));
+        .computeMessageSize(5, preferences_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -399,27 +335,19 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.project.booking.stubs.Reservation)) {
+    if (!(obj instanceof com.project.booking.stubs.ReservationDTO)) {
       return super.equals(obj);
     }
-    com.project.booking.stubs.Reservation other = (com.project.booking.stubs.Reservation) obj;
+    com.project.booking.stubs.ReservationDTO other = (com.project.booking.stubs.ReservationDTO) obj;
 
-    if (getId()
-        != other.getId()) return false;
     if (!getDateDebut()
         .equals(other.getDateDebut())) return false;
     if (!getDateFin()
         .equals(other.getDateFin())) return false;
-    if (hasChambre() != other.hasChambre()) return false;
-    if (hasChambre()) {
-      if (!getChambre()
-          .equals(other.getChambre())) return false;
-    }
-    if (hasClient() != other.hasClient()) return false;
-    if (hasClient()) {
-      if (!getClient()
-          .equals(other.getClient())) return false;
-    }
+    if (getChambreId()
+        != other.getChambreId()) return false;
+    if (getClientId()
+        != other.getClientId()) return false;
     if (!getPreferencesList()
         .equals(other.getPreferencesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -433,21 +361,16 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getId());
     hash = (37 * hash) + DATEDEBUT_FIELD_NUMBER;
     hash = (53 * hash) + getDateDebut().hashCode();
     hash = (37 * hash) + DATEFIN_FIELD_NUMBER;
     hash = (53 * hash) + getDateFin().hashCode();
-    if (hasChambre()) {
-      hash = (37 * hash) + CHAMBRE_FIELD_NUMBER;
-      hash = (53 * hash) + getChambre().hashCode();
-    }
-    if (hasClient()) {
-      hash = (37 * hash) + CLIENT_FIELD_NUMBER;
-      hash = (53 * hash) + getClient().hashCode();
-    }
+    hash = (37 * hash) + CHAMBREID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getChambreId());
+    hash = (37 * hash) + CLIENTID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getClientId());
     if (getPreferencesCount() > 0) {
       hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getPreferencesList().hashCode();
@@ -457,69 +380,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(byte[] data)
+  public static com.project.booking.stubs.ReservationDTO parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.ReservationDTO parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.Reservation parseDelimitedFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.ReservationDTO parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.Reservation parseDelimitedFrom(
+  public static com.project.booking.stubs.ReservationDTO parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.Reservation parseFrom(
+  public static com.project.booking.stubs.ReservationDTO parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -532,7 +455,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.project.booking.stubs.Reservation prototype) {
+  public static Builder newBuilder(com.project.booking.stubs.ReservationDTO prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -552,26 +475,26 @@ private static final long serialVersionUID = 0L;
    * Message représentant une reservation
    * </pre>
    *
-   * Protobuf type {@code Reservation}
+   * Protobuf type {@code ReservationDTO}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Reservation)
-      com.project.booking.stubs.ReservationOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ReservationDTO)
+      com.project.booking.stubs.ReservationDTOOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_Reservation_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_ReservationDTO_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_Reservation_fieldAccessorTable
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_ReservationDTO_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.project.booking.stubs.Reservation.class, com.project.booking.stubs.Reservation.Builder.class);
+              com.project.booking.stubs.ReservationDTO.class, com.project.booking.stubs.ReservationDTO.Builder.class);
     }
 
-    // Construct using com.project.booking.stubs.Reservation.newBuilder()
+    // Construct using com.project.booking.stubs.ReservationDTO.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -590,24 +513,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      id_ = 0L;
-
       dateDebut_ = "";
 
       dateFin_ = "";
 
-      if (chambreBuilder_ == null) {
-        chambre_ = null;
-      } else {
-        chambre_ = null;
-        chambreBuilder_ = null;
-      }
-      if (clientBuilder_ == null) {
-        client_ = null;
-      } else {
-        client_ = null;
-        clientBuilder_ = null;
-      }
+      chambreId_ = 0L;
+
+      clientId_ = 0L;
+
       if (preferencesBuilder_ == null) {
         preferences_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -620,17 +533,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_Reservation_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_ReservationDTO_descriptor;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.Reservation getDefaultInstanceForType() {
-      return com.project.booking.stubs.Reservation.getDefaultInstance();
+    public com.project.booking.stubs.ReservationDTO getDefaultInstanceForType() {
+      return com.project.booking.stubs.ReservationDTO.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.Reservation build() {
-      com.project.booking.stubs.Reservation result = buildPartial();
+    public com.project.booking.stubs.ReservationDTO build() {
+      com.project.booking.stubs.ReservationDTO result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -638,22 +551,13 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.Reservation buildPartial() {
-      com.project.booking.stubs.Reservation result = new com.project.booking.stubs.Reservation(this);
+    public com.project.booking.stubs.ReservationDTO buildPartial() {
+      com.project.booking.stubs.ReservationDTO result = new com.project.booking.stubs.ReservationDTO(this);
       int from_bitField0_ = bitField0_;
-      result.id_ = id_;
       result.dateDebut_ = dateDebut_;
       result.dateFin_ = dateFin_;
-      if (chambreBuilder_ == null) {
-        result.chambre_ = chambre_;
-      } else {
-        result.chambre_ = chambreBuilder_.build();
-      }
-      if (clientBuilder_ == null) {
-        result.client_ = client_;
-      } else {
-        result.client_ = clientBuilder_.build();
-      }
+      result.chambreId_ = chambreId_;
+      result.clientId_ = clientId_;
       if (preferencesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           preferences_ = java.util.Collections.unmodifiableList(preferences_);
@@ -701,19 +605,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.project.booking.stubs.Reservation) {
-        return mergeFrom((com.project.booking.stubs.Reservation)other);
+      if (other instanceof com.project.booking.stubs.ReservationDTO) {
+        return mergeFrom((com.project.booking.stubs.ReservationDTO)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.project.booking.stubs.Reservation other) {
-      if (other == com.project.booking.stubs.Reservation.getDefaultInstance()) return this;
-      if (other.getId() != 0L) {
-        setId(other.getId());
-      }
+    public Builder mergeFrom(com.project.booking.stubs.ReservationDTO other) {
+      if (other == com.project.booking.stubs.ReservationDTO.getDefaultInstance()) return this;
       if (!other.getDateDebut().isEmpty()) {
         dateDebut_ = other.dateDebut_;
         onChanged();
@@ -722,11 +623,11 @@ private static final long serialVersionUID = 0L;
         dateFin_ = other.dateFin_;
         onChanged();
       }
-      if (other.hasChambre()) {
-        mergeChambre(other.getChambre());
+      if (other.getChambreId() != 0L) {
+        setChambreId(other.getChambreId());
       }
-      if (other.hasClient()) {
-        mergeClient(other.getClient());
+      if (other.getClientId() != 0L) {
+        setClientId(other.getClientId());
       }
       if (preferencesBuilder_ == null) {
         if (!other.preferences_.isEmpty()) {
@@ -769,11 +670,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.project.booking.stubs.Reservation parsedMessage = null;
+      com.project.booking.stubs.ReservationDTO parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.project.booking.stubs.Reservation) e.getUnfinishedMessage();
+        parsedMessage = (com.project.booking.stubs.ReservationDTO) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -784,39 +685,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long id_ ;
-    /**
-     * <code>int64 id = 1;</code>
-     * @return The id.
-     */
-    public long getId() {
-      return id_;
-    }
-    /**
-     * <code>int64 id = 1;</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setId(long value) {
-      
-      id_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 id = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      
-      id_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object dateDebut_ = "";
     /**
-     * <code>string dateDebut = 2;</code>
+     * <code>string dateDebut = 1;</code>
      * @return The dateDebut.
      */
     public java.lang.String getDateDebut() {
@@ -832,7 +703,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dateDebut = 2;</code>
+     * <code>string dateDebut = 1;</code>
      * @return The bytes for dateDebut.
      */
     public com.google.protobuf.ByteString
@@ -849,7 +720,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dateDebut = 2;</code>
+     * <code>string dateDebut = 1;</code>
      * @param value The dateDebut to set.
      * @return This builder for chaining.
      */
@@ -864,7 +735,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string dateDebut = 2;</code>
+     * <code>string dateDebut = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearDateDebut() {
@@ -874,7 +745,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string dateDebut = 2;</code>
+     * <code>string dateDebut = 1;</code>
      * @param value The bytes for dateDebut to set.
      * @return This builder for chaining.
      */
@@ -892,7 +763,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object dateFin_ = "";
     /**
-     * <code>string dateFin = 3;</code>
+     * <code>string dateFin = 2;</code>
      * @return The dateFin.
      */
     public java.lang.String getDateFin() {
@@ -908,7 +779,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dateFin = 3;</code>
+     * <code>string dateFin = 2;</code>
      * @return The bytes for dateFin.
      */
     public com.google.protobuf.ByteString
@@ -925,7 +796,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dateFin = 3;</code>
+     * <code>string dateFin = 2;</code>
      * @param value The dateFin to set.
      * @return This builder for chaining.
      */
@@ -940,7 +811,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string dateFin = 3;</code>
+     * <code>string dateFin = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearDateFin() {
@@ -950,7 +821,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string dateFin = 3;</code>
+     * <code>string dateFin = 2;</code>
      * @param value The bytes for dateFin to set.
      * @return This builder for chaining.
      */
@@ -966,264 +837,86 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.project.booking.stubs.Chambre chambre_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Chambre, com.project.booking.stubs.Chambre.Builder, com.project.booking.stubs.ChambreOrBuilder> chambreBuilder_;
+    private long chambreId_ ;
     /**
-     * <code>.Chambre chambre = 4;</code>
-     * @return Whether the chambre field is set.
+     * <code>int64 chambreId = 3;</code>
+     * @return The chambreId.
      */
-    public boolean hasChambre() {
-      return chambreBuilder_ != null || chambre_ != null;
+    public long getChambreId() {
+      return chambreId_;
     }
     /**
-     * <code>.Chambre chambre = 4;</code>
-     * @return The chambre.
+     * <code>int64 chambreId = 3;</code>
+     * @param value The chambreId to set.
+     * @return This builder for chaining.
      */
-    public com.project.booking.stubs.Chambre getChambre() {
-      if (chambreBuilder_ == null) {
-        return chambre_ == null ? com.project.booking.stubs.Chambre.getDefaultInstance() : chambre_;
-      } else {
-        return chambreBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    public Builder setChambre(com.project.booking.stubs.Chambre value) {
-      if (chambreBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        chambre_ = value;
-        onChanged();
-      } else {
-        chambreBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    public Builder setChambre(
-        com.project.booking.stubs.Chambre.Builder builderForValue) {
-      if (chambreBuilder_ == null) {
-        chambre_ = builderForValue.build();
-        onChanged();
-      } else {
-        chambreBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    public Builder mergeChambre(com.project.booking.stubs.Chambre value) {
-      if (chambreBuilder_ == null) {
-        if (chambre_ != null) {
-          chambre_ =
-            com.project.booking.stubs.Chambre.newBuilder(chambre_).mergeFrom(value).buildPartial();
-        } else {
-          chambre_ = value;
-        }
-        onChanged();
-      } else {
-        chambreBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    public Builder clearChambre() {
-      if (chambreBuilder_ == null) {
-        chambre_ = null;
-        onChanged();
-      } else {
-        chambre_ = null;
-        chambreBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    public com.project.booking.stubs.Chambre.Builder getChambreBuilder() {
+    public Builder setChambreId(long value) {
       
+      chambreId_ = value;
       onChanged();
-      return getChambreFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    public com.project.booking.stubs.ChambreOrBuilder getChambreOrBuilder() {
-      if (chambreBuilder_ != null) {
-        return chambreBuilder_.getMessageOrBuilder();
-      } else {
-        return chambre_ == null ?
-            com.project.booking.stubs.Chambre.getDefaultInstance() : chambre_;
-      }
-    }
-    /**
-     * <code>.Chambre chambre = 4;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Chambre, com.project.booking.stubs.Chambre.Builder, com.project.booking.stubs.ChambreOrBuilder> 
-        getChambreFieldBuilder() {
-      if (chambreBuilder_ == null) {
-        chambreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.project.booking.stubs.Chambre, com.project.booking.stubs.Chambre.Builder, com.project.booking.stubs.ChambreOrBuilder>(
-                getChambre(),
-                getParentForChildren(),
-                isClean());
-        chambre_ = null;
-      }
-      return chambreBuilder_;
-    }
-
-    private com.project.booking.stubs.Client client_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder> clientBuilder_;
-    /**
-     * <code>.Client client = 5;</code>
-     * @return Whether the client field is set.
-     */
-    public boolean hasClient() {
-      return clientBuilder_ != null || client_ != null;
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     * @return The client.
-     */
-    public com.project.booking.stubs.Client getClient() {
-      if (clientBuilder_ == null) {
-        return client_ == null ? com.project.booking.stubs.Client.getDefaultInstance() : client_;
-      } else {
-        return clientBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     */
-    public Builder setClient(com.project.booking.stubs.Client value) {
-      if (clientBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        client_ = value;
-        onChanged();
-      } else {
-        clientBuilder_.setMessage(value);
-      }
-
       return this;
     }
     /**
-     * <code>.Client client = 5;</code>
+     * <code>int64 chambreId = 3;</code>
+     * @return This builder for chaining.
      */
-    public Builder setClient(
-        com.project.booking.stubs.Client.Builder builderForValue) {
-      if (clientBuilder_ == null) {
-        client_ = builderForValue.build();
-        onChanged();
-      } else {
-        clientBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     */
-    public Builder mergeClient(com.project.booking.stubs.Client value) {
-      if (clientBuilder_ == null) {
-        if (client_ != null) {
-          client_ =
-            com.project.booking.stubs.Client.newBuilder(client_).mergeFrom(value).buildPartial();
-        } else {
-          client_ = value;
-        }
-        onChanged();
-      } else {
-        clientBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     */
-    public Builder clearClient() {
-      if (clientBuilder_ == null) {
-        client_ = null;
-        onChanged();
-      } else {
-        client_ = null;
-        clientBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     */
-    public com.project.booking.stubs.Client.Builder getClientBuilder() {
+    public Builder clearChambreId() {
       
+      chambreId_ = 0L;
       onChanged();
-      return getClientFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     */
-    public com.project.booking.stubs.ClientOrBuilder getClientOrBuilder() {
-      if (clientBuilder_ != null) {
-        return clientBuilder_.getMessageOrBuilder();
-      } else {
-        return client_ == null ?
-            com.project.booking.stubs.Client.getDefaultInstance() : client_;
-      }
-    }
-    /**
-     * <code>.Client client = 5;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder> 
-        getClientFieldBuilder() {
-      if (clientBuilder_ == null) {
-        clientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.project.booking.stubs.Client, com.project.booking.stubs.Client.Builder, com.project.booking.stubs.ClientOrBuilder>(
-                getClient(),
-                getParentForChildren(),
-                isClean());
-        client_ = null;
-      }
-      return clientBuilder_;
+      return this;
     }
 
-    private java.util.List<com.project.booking.stubs.Preference> preferences_ =
+    private long clientId_ ;
+    /**
+     * <code>int64 clientId = 4;</code>
+     * @return The clientId.
+     */
+    public long getClientId() {
+      return clientId_;
+    }
+    /**
+     * <code>int64 clientId = 4;</code>
+     * @param value The clientId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClientId(long value) {
+      
+      clientId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 clientId = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClientId() {
+      
+      clientId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.project.booking.stubs.PreferenceDTO> preferences_ =
       java.util.Collections.emptyList();
     private void ensurePreferencesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        preferences_ = new java.util.ArrayList<com.project.booking.stubs.Preference>(preferences_);
+        preferences_ = new java.util.ArrayList<com.project.booking.stubs.PreferenceDTO>(preferences_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder> preferencesBuilder_;
+        com.project.booking.stubs.PreferenceDTO, com.project.booking.stubs.PreferenceDTO.Builder, com.project.booking.stubs.PreferenceDTOOrBuilder> preferencesBuilder_;
 
     /**
      * <pre>
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public java.util.List<com.project.booking.stubs.Preference> getPreferencesList() {
+    public java.util.List<com.project.booking.stubs.PreferenceDTO> getPreferencesList() {
       if (preferencesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(preferences_);
       } else {
@@ -1235,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public int getPreferencesCount() {
       if (preferencesBuilder_ == null) {
@@ -1249,9 +942,9 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public com.project.booking.stubs.Preference getPreferences(int index) {
+    public com.project.booking.stubs.PreferenceDTO getPreferences(int index) {
       if (preferencesBuilder_ == null) {
         return preferences_.get(index);
       } else {
@@ -1263,10 +956,10 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder setPreferences(
-        int index, com.project.booking.stubs.Preference value) {
+        int index, com.project.booking.stubs.PreferenceDTO value) {
       if (preferencesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1284,10 +977,10 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder setPreferences(
-        int index, com.project.booking.stubs.Preference.Builder builderForValue) {
+        int index, com.project.booking.stubs.PreferenceDTO.Builder builderForValue) {
       if (preferencesBuilder_ == null) {
         ensurePreferencesIsMutable();
         preferences_.set(index, builderForValue.build());
@@ -1302,9 +995,9 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public Builder addPreferences(com.project.booking.stubs.Preference value) {
+    public Builder addPreferences(com.project.booking.stubs.PreferenceDTO value) {
       if (preferencesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1322,10 +1015,10 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder addPreferences(
-        int index, com.project.booking.stubs.Preference value) {
+        int index, com.project.booking.stubs.PreferenceDTO value) {
       if (preferencesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1343,10 +1036,10 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder addPreferences(
-        com.project.booking.stubs.Preference.Builder builderForValue) {
+        com.project.booking.stubs.PreferenceDTO.Builder builderForValue) {
       if (preferencesBuilder_ == null) {
         ensurePreferencesIsMutable();
         preferences_.add(builderForValue.build());
@@ -1361,10 +1054,10 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder addPreferences(
-        int index, com.project.booking.stubs.Preference.Builder builderForValue) {
+        int index, com.project.booking.stubs.PreferenceDTO.Builder builderForValue) {
       if (preferencesBuilder_ == null) {
         ensurePreferencesIsMutable();
         preferences_.add(index, builderForValue.build());
@@ -1379,10 +1072,10 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder addAllPreferences(
-        java.lang.Iterable<? extends com.project.booking.stubs.Preference> values) {
+        java.lang.Iterable<? extends com.project.booking.stubs.PreferenceDTO> values) {
       if (preferencesBuilder_ == null) {
         ensurePreferencesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1398,7 +1091,7 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder clearPreferences() {
       if (preferencesBuilder_ == null) {
@@ -1415,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
     public Builder removePreferences(int index) {
       if (preferencesBuilder_ == null) {
@@ -1432,9 +1125,9 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public com.project.booking.stubs.Preference.Builder getPreferencesBuilder(
+    public com.project.booking.stubs.PreferenceDTO.Builder getPreferencesBuilder(
         int index) {
       return getPreferencesFieldBuilder().getBuilder(index);
     }
@@ -1443,9 +1136,9 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public com.project.booking.stubs.PreferenceOrBuilder getPreferencesOrBuilder(
+    public com.project.booking.stubs.PreferenceDTOOrBuilder getPreferencesOrBuilder(
         int index) {
       if (preferencesBuilder_ == null) {
         return preferences_.get(index);  } else {
@@ -1457,9 +1150,9 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public java.util.List<? extends com.project.booking.stubs.PreferenceOrBuilder> 
+    public java.util.List<? extends com.project.booking.stubs.PreferenceDTOOrBuilder> 
          getPreferencesOrBuilderList() {
       if (preferencesBuilder_ != null) {
         return preferencesBuilder_.getMessageOrBuilderList();
@@ -1472,41 +1165,41 @@ private static final long serialVersionUID = 0L;
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public com.project.booking.stubs.Preference.Builder addPreferencesBuilder() {
+    public com.project.booking.stubs.PreferenceDTO.Builder addPreferencesBuilder() {
       return getPreferencesFieldBuilder().addBuilder(
-          com.project.booking.stubs.Preference.getDefaultInstance());
+          com.project.booking.stubs.PreferenceDTO.getDefaultInstance());
     }
     /**
      * <pre>
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public com.project.booking.stubs.Preference.Builder addPreferencesBuilder(
+    public com.project.booking.stubs.PreferenceDTO.Builder addPreferencesBuilder(
         int index) {
       return getPreferencesFieldBuilder().addBuilder(
-          index, com.project.booking.stubs.Preference.getDefaultInstance());
+          index, com.project.booking.stubs.PreferenceDTO.getDefaultInstance());
     }
     /**
      * <pre>
      * Champ repeated pour les préférences
      * </pre>
      *
-     * <code>repeated .Preference preferences = 6;</code>
+     * <code>repeated .PreferenceDTO preferences = 5;</code>
      */
-    public java.util.List<com.project.booking.stubs.Preference.Builder> 
+    public java.util.List<com.project.booking.stubs.PreferenceDTO.Builder> 
          getPreferencesBuilderList() {
       return getPreferencesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder> 
+        com.project.booking.stubs.PreferenceDTO, com.project.booking.stubs.PreferenceDTO.Builder, com.project.booking.stubs.PreferenceDTOOrBuilder> 
         getPreferencesFieldBuilder() {
       if (preferencesBuilder_ == null) {
         preferencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.project.booking.stubs.Preference, com.project.booking.stubs.Preference.Builder, com.project.booking.stubs.PreferenceOrBuilder>(
+            com.project.booking.stubs.PreferenceDTO, com.project.booking.stubs.PreferenceDTO.Builder, com.project.booking.stubs.PreferenceDTOOrBuilder>(
                 preferences_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -1528,41 +1221,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Reservation)
+    // @@protoc_insertion_point(builder_scope:ReservationDTO)
   }
 
-  // @@protoc_insertion_point(class_scope:Reservation)
-  private static final com.project.booking.stubs.Reservation DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ReservationDTO)
+  private static final com.project.booking.stubs.ReservationDTO DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.project.booking.stubs.Reservation();
+    DEFAULT_INSTANCE = new com.project.booking.stubs.ReservationDTO();
   }
 
-  public static com.project.booking.stubs.Reservation getDefaultInstance() {
+  public static com.project.booking.stubs.ReservationDTO getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Reservation>
-      PARSER = new com.google.protobuf.AbstractParser<Reservation>() {
+  private static final com.google.protobuf.Parser<ReservationDTO>
+      PARSER = new com.google.protobuf.AbstractParser<ReservationDTO>() {
     @java.lang.Override
-    public Reservation parsePartialFrom(
+    public ReservationDTO parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Reservation(input, extensionRegistry);
+      return new ReservationDTO(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<Reservation> parser() {
+  public static com.google.protobuf.Parser<ReservationDTO> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Reservation> getParserForType() {
+  public com.google.protobuf.Parser<ReservationDTO> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.project.booking.stubs.Reservation getDefaultInstanceForType() {
+  public com.project.booking.stubs.ReservationDTO getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

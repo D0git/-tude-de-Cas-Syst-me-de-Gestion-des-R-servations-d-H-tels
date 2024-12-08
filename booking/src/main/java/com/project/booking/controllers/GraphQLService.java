@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GraphQLService {
 
-    private final ReservationService reservationService;
+    /*private final ReservationService reservationService;
 
     // Query to fetch all reservations
     @QueryMapping
@@ -60,7 +60,7 @@ public class GraphQLService {
     public List<Preference> getAllPreferences(){
         return reservationService.getAllPreferences();
     }
-
+*/
 
 }
 

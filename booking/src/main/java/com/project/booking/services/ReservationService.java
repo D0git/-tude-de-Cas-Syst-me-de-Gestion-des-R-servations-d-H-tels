@@ -37,7 +37,7 @@ public class ReservationService {
     }
 
 
-    public boolean deleteReservation(Long id) {
+    public boolean deleteReservationById(Long id) {
         if(reservationRepository.existsById(id)){
             reservationRepository.deleteById(id);
             return true;
@@ -103,5 +103,6 @@ public class ReservationService {
     public List <Preference> getAllPreferences(){
         return preferenceRepository.findAll();
     }
+
 
 }

@@ -53,7 +53,7 @@ public class RestController {
     }
     @DeleteMapping("/reservations/delete/{id}")
     public ResponseEntity<String> deleteReservationById(@PathVariable("id")Long id){
-        boolean result = reservationService.deleteReservation(id);
+        boolean result = reservationService.deleteReservationById(id);
         return result?ResponseEntity.ok("Reservation deleted successfully"):ResponseEntity.status(404).body("Reservation doesn't exist");
     }
 }

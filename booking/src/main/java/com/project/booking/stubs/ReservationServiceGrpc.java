@@ -23,11 +23,11 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
     comments = "Source: reservation.proto")
-public final class CompteServiceGrpc {
+public final class ReservationServiceGrpc {
 
-  private CompteServiceGrpc() {}
+  private ReservationServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "CompteService";
+  public static final String SERVICE_NAME = "ReservationService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.project.booking.stubs.getAllReservationsRequest,
@@ -41,25 +41,89 @@ public final class CompteServiceGrpc {
   public static io.grpc.MethodDescriptor<com.project.booking.stubs.getAllReservationsRequest,
       com.project.booking.stubs.getAllReservationsResponse> getAllReservationsMethod() {
     io.grpc.MethodDescriptor<com.project.booking.stubs.getAllReservationsRequest, com.project.booking.stubs.getAllReservationsResponse> getAllReservationsMethod;
-    if ((getAllReservationsMethod = CompteServiceGrpc.getAllReservationsMethod) == null) {
-      synchronized (CompteServiceGrpc.class) {
-        if ((getAllReservationsMethod = CompteServiceGrpc.getAllReservationsMethod) == null) {
-          CompteServiceGrpc.getAllReservationsMethod = getAllReservationsMethod = 
+    if ((getAllReservationsMethod = ReservationServiceGrpc.getAllReservationsMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getAllReservationsMethod = ReservationServiceGrpc.getAllReservationsMethod) == null) {
+          ReservationServiceGrpc.getAllReservationsMethod = getAllReservationsMethod = 
               io.grpc.MethodDescriptor.<com.project.booking.stubs.getAllReservationsRequest, com.project.booking.stubs.getAllReservationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "CompteService", "AllReservations"))
+                  "ReservationService", "AllReservations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.getAllReservationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.getAllReservationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CompteServiceMethodDescriptorSupplier("AllReservations"))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("AllReservations"))
                   .build();
           }
         }
      }
      return getAllReservationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.project.booking.stubs.getAllChambresRequest,
+      com.project.booking.stubs.getAllChambresResponse> getAllChambresMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllChambres",
+      requestType = com.project.booking.stubs.getAllChambresRequest.class,
+      responseType = com.project.booking.stubs.getAllChambresResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.project.booking.stubs.getAllChambresRequest,
+      com.project.booking.stubs.getAllChambresResponse> getAllChambresMethod() {
+    io.grpc.MethodDescriptor<com.project.booking.stubs.getAllChambresRequest, com.project.booking.stubs.getAllChambresResponse> getAllChambresMethod;
+    if ((getAllChambresMethod = ReservationServiceGrpc.getAllChambresMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getAllChambresMethod = ReservationServiceGrpc.getAllChambresMethod) == null) {
+          ReservationServiceGrpc.getAllChambresMethod = getAllChambresMethod = 
+              io.grpc.MethodDescriptor.<com.project.booking.stubs.getAllChambresRequest, com.project.booking.stubs.getAllChambresResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "ReservationService", "AllChambres"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.project.booking.stubs.getAllChambresRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.project.booking.stubs.getAllChambresResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("AllChambres"))
+                  .build();
+          }
+        }
+     }
+     return getAllChambresMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.project.booking.stubs.getAllPreferencesRequest,
+      com.project.booking.stubs.getAllPreferencesResponse> getAllPreferencesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllPreferences",
+      requestType = com.project.booking.stubs.getAllPreferencesRequest.class,
+      responseType = com.project.booking.stubs.getAllPreferencesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.project.booking.stubs.getAllPreferencesRequest,
+      com.project.booking.stubs.getAllPreferencesResponse> getAllPreferencesMethod() {
+    io.grpc.MethodDescriptor<com.project.booking.stubs.getAllPreferencesRequest, com.project.booking.stubs.getAllPreferencesResponse> getAllPreferencesMethod;
+    if ((getAllPreferencesMethod = ReservationServiceGrpc.getAllPreferencesMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getAllPreferencesMethod = ReservationServiceGrpc.getAllPreferencesMethod) == null) {
+          ReservationServiceGrpc.getAllPreferencesMethod = getAllPreferencesMethod = 
+              io.grpc.MethodDescriptor.<com.project.booking.stubs.getAllPreferencesRequest, com.project.booking.stubs.getAllPreferencesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "ReservationService", "AllPreferences"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.project.booking.stubs.getAllPreferencesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.project.booking.stubs.getAllPreferencesResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("AllPreferences"))
+                  .build();
+          }
+        }
+     }
+     return getAllPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.project.booking.stubs.getReservationByIdRequest,
@@ -73,20 +137,20 @@ public final class CompteServiceGrpc {
   public static io.grpc.MethodDescriptor<com.project.booking.stubs.getReservationByIdRequest,
       com.project.booking.stubs.getReservationByIdResponse> getReservationByIdMethod() {
     io.grpc.MethodDescriptor<com.project.booking.stubs.getReservationByIdRequest, com.project.booking.stubs.getReservationByIdResponse> getReservationByIdMethod;
-    if ((getReservationByIdMethod = CompteServiceGrpc.getReservationByIdMethod) == null) {
-      synchronized (CompteServiceGrpc.class) {
-        if ((getReservationByIdMethod = CompteServiceGrpc.getReservationByIdMethod) == null) {
-          CompteServiceGrpc.getReservationByIdMethod = getReservationByIdMethod = 
+    if ((getReservationByIdMethod = ReservationServiceGrpc.getReservationByIdMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getReservationByIdMethod = ReservationServiceGrpc.getReservationByIdMethod) == null) {
+          ReservationServiceGrpc.getReservationByIdMethod = getReservationByIdMethod = 
               io.grpc.MethodDescriptor.<com.project.booking.stubs.getReservationByIdRequest, com.project.booking.stubs.getReservationByIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "CompteService", "ReservationById"))
+                  "ReservationService", "ReservationById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.getReservationByIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.getReservationByIdResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CompteServiceMethodDescriptorSupplier("ReservationById"))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("ReservationById"))
                   .build();
           }
         }
@@ -105,25 +169,57 @@ public final class CompteServiceGrpc {
   public static io.grpc.MethodDescriptor<com.project.booking.stubs.saveReservationRequest,
       com.project.booking.stubs.saveReservationResponse> getSaveReservationMethod() {
     io.grpc.MethodDescriptor<com.project.booking.stubs.saveReservationRequest, com.project.booking.stubs.saveReservationResponse> getSaveReservationMethod;
-    if ((getSaveReservationMethod = CompteServiceGrpc.getSaveReservationMethod) == null) {
-      synchronized (CompteServiceGrpc.class) {
-        if ((getSaveReservationMethod = CompteServiceGrpc.getSaveReservationMethod) == null) {
-          CompteServiceGrpc.getSaveReservationMethod = getSaveReservationMethod = 
+    if ((getSaveReservationMethod = ReservationServiceGrpc.getSaveReservationMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getSaveReservationMethod = ReservationServiceGrpc.getSaveReservationMethod) == null) {
+          ReservationServiceGrpc.getSaveReservationMethod = getSaveReservationMethod = 
               io.grpc.MethodDescriptor.<com.project.booking.stubs.saveReservationRequest, com.project.booking.stubs.saveReservationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "CompteService", "SaveReservation"))
+                  "ReservationService", "SaveReservation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.saveReservationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.saveReservationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CompteServiceMethodDescriptorSupplier("SaveReservation"))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("SaveReservation"))
                   .build();
           }
         }
      }
      return getSaveReservationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.project.booking.stubs.updateReservationRequest,
+      com.project.booking.stubs.updateReservationResponse> getUpdateReservationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateReservation",
+      requestType = com.project.booking.stubs.updateReservationRequest.class,
+      responseType = com.project.booking.stubs.updateReservationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.project.booking.stubs.updateReservationRequest,
+      com.project.booking.stubs.updateReservationResponse> getUpdateReservationMethod() {
+    io.grpc.MethodDescriptor<com.project.booking.stubs.updateReservationRequest, com.project.booking.stubs.updateReservationResponse> getUpdateReservationMethod;
+    if ((getUpdateReservationMethod = ReservationServiceGrpc.getUpdateReservationMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getUpdateReservationMethod = ReservationServiceGrpc.getUpdateReservationMethod) == null) {
+          ReservationServiceGrpc.getUpdateReservationMethod = getUpdateReservationMethod = 
+              io.grpc.MethodDescriptor.<com.project.booking.stubs.updateReservationRequest, com.project.booking.stubs.updateReservationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "ReservationService", "UpdateReservation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.project.booking.stubs.updateReservationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.project.booking.stubs.updateReservationResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("UpdateReservation"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateReservationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.project.booking.stubs.deleteReservationByIdRequest,
@@ -137,20 +233,20 @@ public final class CompteServiceGrpc {
   public static io.grpc.MethodDescriptor<com.project.booking.stubs.deleteReservationByIdRequest,
       com.project.booking.stubs.deleteReservationByIdResponse> getDeleteReservationByIdMethod() {
     io.grpc.MethodDescriptor<com.project.booking.stubs.deleteReservationByIdRequest, com.project.booking.stubs.deleteReservationByIdResponse> getDeleteReservationByIdMethod;
-    if ((getDeleteReservationByIdMethod = CompteServiceGrpc.getDeleteReservationByIdMethod) == null) {
-      synchronized (CompteServiceGrpc.class) {
-        if ((getDeleteReservationByIdMethod = CompteServiceGrpc.getDeleteReservationByIdMethod) == null) {
-          CompteServiceGrpc.getDeleteReservationByIdMethod = getDeleteReservationByIdMethod = 
+    if ((getDeleteReservationByIdMethod = ReservationServiceGrpc.getDeleteReservationByIdMethod) == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getDeleteReservationByIdMethod = ReservationServiceGrpc.getDeleteReservationByIdMethod) == null) {
+          ReservationServiceGrpc.getDeleteReservationByIdMethod = getDeleteReservationByIdMethod = 
               io.grpc.MethodDescriptor.<com.project.booking.stubs.deleteReservationByIdRequest, com.project.booking.stubs.deleteReservationByIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "CompteService", "DeleteReservationById"))
+                  "ReservationService", "DeleteReservationById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.deleteReservationByIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.project.booking.stubs.deleteReservationByIdResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CompteServiceMethodDescriptorSupplier("DeleteReservationById"))
+                  .setSchemaDescriptor(new ReservationServiceMethodDescriptorSupplier("DeleteReservationById"))
                   .build();
           }
         }
@@ -161,24 +257,24 @@ public final class CompteServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static CompteServiceStub newStub(io.grpc.Channel channel) {
-    return new CompteServiceStub(channel);
+  public static ReservationServiceStub newStub(io.grpc.Channel channel) {
+    return new ReservationServiceStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static CompteServiceBlockingStub newBlockingStub(
+  public static ReservationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CompteServiceBlockingStub(channel);
+    return new ReservationServiceBlockingStub(channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static CompteServiceFutureStub newFutureStub(
+  public static ReservationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CompteServiceFutureStub(channel);
+    return new ReservationServiceFutureStub(channel);
   }
 
   /**
@@ -186,7 +282,7 @@ public final class CompteServiceGrpc {
    * Définition du service correspondant aux requêtes et mutations GraphQL
    * </pre>
    */
-  public static abstract class CompteServiceImplBase implements io.grpc.BindableService {
+  public static abstract class ReservationServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -196,6 +292,26 @@ public final class CompteServiceGrpc {
     public void allReservations(com.project.booking.stubs.getAllReservationsRequest request,
         io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllReservationsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getAllReservationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public void allChambres(com.project.booking.stubs.getAllChambresRequest request,
+        io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllChambresResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getAllChambresMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public void allPreferences(com.project.booking.stubs.getAllPreferencesRequest request,
+        io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllPreferencesResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getAllPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -220,6 +336,16 @@ public final class CompteServiceGrpc {
 
     /**
      * <pre>
+     * Équivalent de la mutation updateReservation
+     * </pre>
+     */
+    public void updateReservation(com.project.booking.stubs.updateReservationRequest request,
+        io.grpc.stub.StreamObserver<com.project.booking.stubs.updateReservationResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateReservationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Équivalent de la mutation deleteReservationById
      * </pre>
      */
@@ -238,6 +364,20 @@ public final class CompteServiceGrpc {
                 com.project.booking.stubs.getAllReservationsResponse>(
                   this, METHODID_ALL_RESERVATIONS)))
           .addMethod(
+            getAllChambresMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.project.booking.stubs.getAllChambresRequest,
+                com.project.booking.stubs.getAllChambresResponse>(
+                  this, METHODID_ALL_CHAMBRES)))
+          .addMethod(
+            getAllPreferencesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.project.booking.stubs.getAllPreferencesRequest,
+                com.project.booking.stubs.getAllPreferencesResponse>(
+                  this, METHODID_ALL_PREFERENCES)))
+          .addMethod(
             getReservationByIdMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -251,6 +391,13 @@ public final class CompteServiceGrpc {
                 com.project.booking.stubs.saveReservationRequest,
                 com.project.booking.stubs.saveReservationResponse>(
                   this, METHODID_SAVE_RESERVATION)))
+          .addMethod(
+            getUpdateReservationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.project.booking.stubs.updateReservationRequest,
+                com.project.booking.stubs.updateReservationResponse>(
+                  this, METHODID_UPDATE_RESERVATION)))
           .addMethod(
             getDeleteReservationByIdMethod(),
             asyncUnaryCall(
@@ -267,20 +414,20 @@ public final class CompteServiceGrpc {
    * Définition du service correspondant aux requêtes et mutations GraphQL
    * </pre>
    */
-  public static final class CompteServiceStub extends io.grpc.stub.AbstractStub<CompteServiceStub> {
-    private CompteServiceStub(io.grpc.Channel channel) {
+  public static final class ReservationServiceStub extends io.grpc.stub.AbstractStub<ReservationServiceStub> {
+    private ReservationServiceStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private CompteServiceStub(io.grpc.Channel channel,
+    private ReservationServiceStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CompteServiceStub build(io.grpc.Channel channel,
+    protected ReservationServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new CompteServiceStub(channel, callOptions);
+      return new ReservationServiceStub(channel, callOptions);
     }
 
     /**
@@ -292,6 +439,28 @@ public final class CompteServiceGrpc {
         io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllReservationsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getAllReservationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public void allChambres(com.project.booking.stubs.getAllChambresRequest request,
+        io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllChambresResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAllChambresMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public void allPreferences(com.project.booking.stubs.getAllPreferencesRequest request,
+        io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllPreferencesResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAllPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -318,6 +487,17 @@ public final class CompteServiceGrpc {
 
     /**
      * <pre>
+     * Équivalent de la mutation updateReservation
+     * </pre>
+     */
+    public void updateReservation(com.project.booking.stubs.updateReservationRequest request,
+        io.grpc.stub.StreamObserver<com.project.booking.stubs.updateReservationResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateReservationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Équivalent de la mutation deleteReservationById
      * </pre>
      */
@@ -333,20 +513,20 @@ public final class CompteServiceGrpc {
    * Définition du service correspondant aux requêtes et mutations GraphQL
    * </pre>
    */
-  public static final class CompteServiceBlockingStub extends io.grpc.stub.AbstractStub<CompteServiceBlockingStub> {
-    private CompteServiceBlockingStub(io.grpc.Channel channel) {
+  public static final class ReservationServiceBlockingStub extends io.grpc.stub.AbstractStub<ReservationServiceBlockingStub> {
+    private ReservationServiceBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private CompteServiceBlockingStub(io.grpc.Channel channel,
+    private ReservationServiceBlockingStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CompteServiceBlockingStub build(io.grpc.Channel channel,
+    protected ReservationServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new CompteServiceBlockingStub(channel, callOptions);
+      return new ReservationServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -357,6 +537,26 @@ public final class CompteServiceGrpc {
     public com.project.booking.stubs.getAllReservationsResponse allReservations(com.project.booking.stubs.getAllReservationsRequest request) {
       return blockingUnaryCall(
           getChannel(), getAllReservationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public com.project.booking.stubs.getAllChambresResponse allChambres(com.project.booking.stubs.getAllChambresRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getAllChambresMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public com.project.booking.stubs.getAllPreferencesResponse allPreferences(com.project.booking.stubs.getAllPreferencesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getAllPreferencesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -381,6 +581,16 @@ public final class CompteServiceGrpc {
 
     /**
      * <pre>
+     * Équivalent de la mutation updateReservation
+     * </pre>
+     */
+    public com.project.booking.stubs.updateReservationResponse updateReservation(com.project.booking.stubs.updateReservationRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateReservationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Équivalent de la mutation deleteReservationById
      * </pre>
      */
@@ -395,20 +605,20 @@ public final class CompteServiceGrpc {
    * Définition du service correspondant aux requêtes et mutations GraphQL
    * </pre>
    */
-  public static final class CompteServiceFutureStub extends io.grpc.stub.AbstractStub<CompteServiceFutureStub> {
-    private CompteServiceFutureStub(io.grpc.Channel channel) {
+  public static final class ReservationServiceFutureStub extends io.grpc.stub.AbstractStub<ReservationServiceFutureStub> {
+    private ReservationServiceFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private CompteServiceFutureStub(io.grpc.Channel channel,
+    private ReservationServiceFutureStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CompteServiceFutureStub build(io.grpc.Channel channel,
+    protected ReservationServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new CompteServiceFutureStub(channel, callOptions);
+      return new ReservationServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -420,6 +630,28 @@ public final class CompteServiceGrpc {
         com.project.booking.stubs.getAllReservationsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getAllReservationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.project.booking.stubs.getAllChambresResponse> allChambres(
+        com.project.booking.stubs.getAllChambresRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAllChambresMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Équivalent de la requête allReservations
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.project.booking.stubs.getAllPreferencesResponse> allPreferences(
+        com.project.booking.stubs.getAllPreferencesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAllPreferencesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -446,6 +678,17 @@ public final class CompteServiceGrpc {
 
     /**
      * <pre>
+     * Équivalent de la mutation updateReservation
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.project.booking.stubs.updateReservationResponse> updateReservation(
+        com.project.booking.stubs.updateReservationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateReservationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Équivalent de la mutation deleteReservationById
      * </pre>
      */
@@ -457,19 +700,22 @@ public final class CompteServiceGrpc {
   }
 
   private static final int METHODID_ALL_RESERVATIONS = 0;
-  private static final int METHODID_RESERVATION_BY_ID = 1;
-  private static final int METHODID_SAVE_RESERVATION = 2;
-  private static final int METHODID_DELETE_RESERVATION_BY_ID = 3;
+  private static final int METHODID_ALL_CHAMBRES = 1;
+  private static final int METHODID_ALL_PREFERENCES = 2;
+  private static final int METHODID_RESERVATION_BY_ID = 3;
+  private static final int METHODID_SAVE_RESERVATION = 4;
+  private static final int METHODID_UPDATE_RESERVATION = 5;
+  private static final int METHODID_DELETE_RESERVATION_BY_ID = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CompteServiceImplBase serviceImpl;
+    private final ReservationServiceImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CompteServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(ReservationServiceImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -482,6 +728,14 @@ public final class CompteServiceGrpc {
           serviceImpl.allReservations((com.project.booking.stubs.getAllReservationsRequest) request,
               (io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllReservationsResponse>) responseObserver);
           break;
+        case METHODID_ALL_CHAMBRES:
+          serviceImpl.allChambres((com.project.booking.stubs.getAllChambresRequest) request,
+              (io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllChambresResponse>) responseObserver);
+          break;
+        case METHODID_ALL_PREFERENCES:
+          serviceImpl.allPreferences((com.project.booking.stubs.getAllPreferencesRequest) request,
+              (io.grpc.stub.StreamObserver<com.project.booking.stubs.getAllPreferencesResponse>) responseObserver);
+          break;
         case METHODID_RESERVATION_BY_ID:
           serviceImpl.reservationById((com.project.booking.stubs.getReservationByIdRequest) request,
               (io.grpc.stub.StreamObserver<com.project.booking.stubs.getReservationByIdResponse>) responseObserver);
@@ -489,6 +743,10 @@ public final class CompteServiceGrpc {
         case METHODID_SAVE_RESERVATION:
           serviceImpl.saveReservation((com.project.booking.stubs.saveReservationRequest) request,
               (io.grpc.stub.StreamObserver<com.project.booking.stubs.saveReservationResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_RESERVATION:
+          serviceImpl.updateReservation((com.project.booking.stubs.updateReservationRequest) request,
+              (io.grpc.stub.StreamObserver<com.project.booking.stubs.updateReservationResponse>) responseObserver);
           break;
         case METHODID_DELETE_RESERVATION_BY_ID:
           serviceImpl.deleteReservationById((com.project.booking.stubs.deleteReservationByIdRequest) request,
@@ -510,9 +768,9 @@ public final class CompteServiceGrpc {
     }
   }
 
-  private static abstract class CompteServiceBaseDescriptorSupplier
+  private static abstract class ReservationServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    CompteServiceBaseDescriptorSupplier() {}
+    ReservationServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -521,21 +779,21 @@ public final class CompteServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("CompteService");
+      return getFileDescriptor().findServiceByName("ReservationService");
     }
   }
 
-  private static final class CompteServiceFileDescriptorSupplier
-      extends CompteServiceBaseDescriptorSupplier {
-    CompteServiceFileDescriptorSupplier() {}
+  private static final class ReservationServiceFileDescriptorSupplier
+      extends ReservationServiceBaseDescriptorSupplier {
+    ReservationServiceFileDescriptorSupplier() {}
   }
 
-  private static final class CompteServiceMethodDescriptorSupplier
-      extends CompteServiceBaseDescriptorSupplier
+  private static final class ReservationServiceMethodDescriptorSupplier
+      extends ReservationServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    CompteServiceMethodDescriptorSupplier(String methodName) {
+    ReservationServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -550,14 +808,17 @@ public final class CompteServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (CompteServiceGrpc.class) {
+      synchronized (ReservationServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CompteServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new ReservationServiceFileDescriptorSupplier())
               .addMethod(getAllReservationsMethod())
+              .addMethod(getAllChambresMethod())
+              .addMethod(getAllPreferencesMethod())
               .addMethod(getReservationByIdMethod())
               .addMethod(getSaveReservationMethod())
+              .addMethod(getUpdateReservationMethod())
               .addMethod(getDeleteReservationByIdMethod())
               .build();
         }

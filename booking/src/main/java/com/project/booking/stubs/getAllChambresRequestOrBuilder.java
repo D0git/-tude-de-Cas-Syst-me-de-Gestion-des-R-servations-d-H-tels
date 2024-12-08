@@ -3,7 +3,7 @@
 
 package com.project.booking.stubs;
 
-public interface getAllchambresRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:getAllchambresRequest)
+public interface getAllChambresRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:getAllChambresRequest)
     com.google.protobuf.MessageOrBuilder {
 }
