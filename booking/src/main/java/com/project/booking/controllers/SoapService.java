@@ -42,10 +42,10 @@ public class SoapService {
         return reservationService.updateReservation(reservation,id);
     }
 
-    @WebMethod
+    /*@WebMethod
     public boolean deleteReservationById(@WebParam(name = "id") Long id){
         return reservationService.deleteReservation(id);
-    }
+    }*/
 
     @WebMethod
     public List<Chambre> getAllChambre(){

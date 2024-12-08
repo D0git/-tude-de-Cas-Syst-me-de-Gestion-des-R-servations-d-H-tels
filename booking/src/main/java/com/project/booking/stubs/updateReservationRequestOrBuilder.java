@@ -3,8 +3,8 @@
 
 package com.project.booking.stubs;
 
-public interface saveReservationRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:saveReservationRequest)
+public interface updateReservationRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:updateReservationRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -21,4 +21,10 @@ public interface saveReservationRequestOrBuilder extends
    * <code>.ReservationDTO reservation = 1;</code>
    */
   com.project.booking.stubs.ReservationDTOOrBuilder getReservationOrBuilder();
+
+  /**
+   * <code>int64 id = 2;</code>
+   * @return The id.
+   */
+  long getId();
 }

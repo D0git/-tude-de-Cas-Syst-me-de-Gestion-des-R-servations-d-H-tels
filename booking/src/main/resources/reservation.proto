@@ -32,6 +32,11 @@ message Preference {
   string nom = 2;
 }
 
+// Message représentant une preference
+message PreferenceDTO {
+  string nom = 1;
+}
+
 // Message représentant une reservation
 message Reservation {
   int64 id = 1;
@@ -42,11 +47,20 @@ message Reservation {
   repeated Preference preferences = 6; // Champ repeated pour les préférences
 }
 
+// Message représentant une reservation
+message ReservationDTO {
+  string dateDebut = 1;
+  string dateFin = 2;
+  int64 chambreId = 3;
+  int64 clientId = 4;
+  repeated PreferenceDTO preferences = 5; // Champ repeated pour les préférences
+}
 
 // Requete pour obtenir tous les chambres
-message getAllchambresRequest{}
+message getAllChambresRequest{}
+
 // Réponse contenant la liste des chambres
-message getAllchambresResponse {
+message getAllChambresResponse {
   repeated Chambre chambres = 1;
 }
 
@@ -89,9 +103,9 @@ message  deleteReservationByIdResponse{
 }
 
 
-// Requête pour ajouter/modifier une reservation
+// Requête pour ajouter une reservation
 message saveReservationRequest {
-  Reservation reservation = 1;
+  ReservationDTO reservation = 1;
 }
 
 // Réponse contenant la reservation sauvegardée
@@ -100,16 +114,33 @@ message saveReservationResponse {
 }
 
 
+// Requête pour modifier une reservation
+message updateReservationRequest {
+  ReservationDTO reservation = 1;
+  int64 id = 2;
+}
+// Réponse contenant la reservation modifiée
+message updateReservationResponse {
+  Reservation reservation = 1;
+}
+
 // Définition du service correspondant aux requêtes et mutations GraphQL
 service ReservationService {
   // Équivalent de la requête allReservations
   rpc AllReservations(getAllReservationsRequest) returns (getAllReservationsResponse);
 
+  // Équivalent de la requête allReservations
+  rpc AllChambres(getAllChambresRequest) returns (getAllChambresResponse);
+  // Équivalent de la requête allReservations
+  rpc AllPreferences(getAllPreferencesRequest) returns (getAllPreferencesResponse);
   // Équivalent de la requête reservationById
   rpc ReservationById(getReservationByIdRequest) returns (getReservationByIdResponse);
 
   // Équivalent de la mutation saveReservation
   rpc SaveReservation(saveReservationRequest) returns (saveReservationResponse);
+
+  // Équivalent de la mutation updateReservation
+  rpc UpdateReservation(updateReservationRequest) returns (updateReservationResponse);
 
   // Équivalent de la mutation deleteReservationById
   rpc DeleteReservationById(deleteReservationByIdRequest) returns (deleteReservationByIdResponse);

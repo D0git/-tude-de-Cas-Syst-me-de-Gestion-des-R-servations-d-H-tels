@@ -8,18 +8,18 @@ package com.project.booking.stubs;
  * Réponse contenant la liste des chambres
  * </pre>
  *
- * Protobuf type {@code getAllchambresResponse}
+ * Protobuf type {@code getAllChambresResponse}
  */
-public  final class getAllchambresResponse extends
+public  final class getAllChambresResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:getAllchambresResponse)
-    getAllchambresResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:getAllChambresResponse)
+    getAllChambresResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use getAllchambresResponse.newBuilder() to construct.
-  private getAllchambresResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use getAllChambresResponse.newBuilder() to construct.
+  private getAllChambresResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private getAllchambresResponse() {
+  private getAllChambresResponse() {
     chambres_ = java.util.Collections.emptyList();
   }
 
@@ -27,7 +27,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new getAllchambresResponse();
+    return new getAllChambresResponse();
   }
 
   @java.lang.Override
@@ -35,7 +35,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private getAllchambresResponse(
+  private getAllChambresResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -87,15 +87,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllchambresResponse_descriptor;
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllChambresResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllchambresResponse_fieldAccessorTable
+    return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllChambresResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.project.booking.stubs.getAllchambresResponse.class, com.project.booking.stubs.getAllchambresResponse.Builder.class);
+            com.project.booking.stubs.getAllChambresResponse.class, com.project.booking.stubs.getAllChambresResponse.Builder.class);
   }
 
   public static final int CHAMBRES_FIELD_NUMBER = 1;
@@ -173,10 +173,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.project.booking.stubs.getAllchambresResponse)) {
+    if (!(obj instanceof com.project.booking.stubs.getAllChambresResponse)) {
       return super.equals(obj);
     }
-    com.project.booking.stubs.getAllchambresResponse other = (com.project.booking.stubs.getAllchambresResponse) obj;
+    com.project.booking.stubs.getAllChambresResponse other = (com.project.booking.stubs.getAllChambresResponse) obj;
 
     if (!getChambresList()
         .equals(other.getChambresList())) return false;
@@ -200,69 +200,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(byte[] data)
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.project.booking.stubs.getAllChambresResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseDelimitedFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.project.booking.stubs.getAllchambresResponse parseFrom(
+  public static com.project.booking.stubs.getAllChambresResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.project.booking.stubs.getAllchambresResponse prototype) {
+  public static Builder newBuilder(com.project.booking.stubs.getAllChambresResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -295,26 +295,26 @@ private static final long serialVersionUID = 0L;
    * Réponse contenant la liste des chambres
    * </pre>
    *
-   * Protobuf type {@code getAllchambresResponse}
+   * Protobuf type {@code getAllChambresResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:getAllchambresResponse)
-      com.project.booking.stubs.getAllchambresResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:getAllChambresResponse)
+      com.project.booking.stubs.getAllChambresResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllchambresResponse_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllChambresResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllchambresResponse_fieldAccessorTable
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllChambresResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.project.booking.stubs.getAllchambresResponse.class, com.project.booking.stubs.getAllchambresResponse.Builder.class);
+              com.project.booking.stubs.getAllChambresResponse.class, com.project.booking.stubs.getAllChambresResponse.Builder.class);
     }
 
-    // Construct using com.project.booking.stubs.getAllchambresResponse.newBuilder()
+    // Construct using com.project.booking.stubs.getAllChambresResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -345,17 +345,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllchambresResponse_descriptor;
+      return com.project.booking.stubs.ReservationOuterClass.internal_static_getAllChambresResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.getAllchambresResponse getDefaultInstanceForType() {
-      return com.project.booking.stubs.getAllchambresResponse.getDefaultInstance();
+    public com.project.booking.stubs.getAllChambresResponse getDefaultInstanceForType() {
+      return com.project.booking.stubs.getAllChambresResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.getAllchambresResponse build() {
-      com.project.booking.stubs.getAllchambresResponse result = buildPartial();
+    public com.project.booking.stubs.getAllChambresResponse build() {
+      com.project.booking.stubs.getAllChambresResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -363,8 +363,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.project.booking.stubs.getAllchambresResponse buildPartial() {
-      com.project.booking.stubs.getAllchambresResponse result = new com.project.booking.stubs.getAllchambresResponse(this);
+    public com.project.booking.stubs.getAllChambresResponse buildPartial() {
+      com.project.booking.stubs.getAllChambresResponse result = new com.project.booking.stubs.getAllChambresResponse(this);
       int from_bitField0_ = bitField0_;
       if (chambresBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -413,16 +413,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.project.booking.stubs.getAllchambresResponse) {
-        return mergeFrom((com.project.booking.stubs.getAllchambresResponse)other);
+      if (other instanceof com.project.booking.stubs.getAllChambresResponse) {
+        return mergeFrom((com.project.booking.stubs.getAllChambresResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.project.booking.stubs.getAllchambresResponse other) {
-      if (other == com.project.booking.stubs.getAllchambresResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.project.booking.stubs.getAllChambresResponse other) {
+      if (other == com.project.booking.stubs.getAllChambresResponse.getDefaultInstance()) return this;
       if (chambresBuilder_ == null) {
         if (!other.chambres_.isEmpty()) {
           if (chambres_.isEmpty()) {
@@ -464,11 +464,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.project.booking.stubs.getAllchambresResponse parsedMessage = null;
+      com.project.booking.stubs.getAllChambresResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.project.booking.stubs.getAllchambresResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.project.booking.stubs.getAllChambresResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -731,41 +731,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:getAllchambresResponse)
+    // @@protoc_insertion_point(builder_scope:getAllChambresResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:getAllchambresResponse)
-  private static final com.project.booking.stubs.getAllchambresResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:getAllChambresResponse)
+  private static final com.project.booking.stubs.getAllChambresResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.project.booking.stubs.getAllchambresResponse();
+    DEFAULT_INSTANCE = new com.project.booking.stubs.getAllChambresResponse();
   }
 
-  public static com.project.booking.stubs.getAllchambresResponse getDefaultInstance() {
+  public static com.project.booking.stubs.getAllChambresResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<getAllchambresResponse>
-      PARSER = new com.google.protobuf.AbstractParser<getAllchambresResponse>() {
+  private static final com.google.protobuf.Parser<getAllChambresResponse>
+      PARSER = new com.google.protobuf.AbstractParser<getAllChambresResponse>() {
     @java.lang.Override
-    public getAllchambresResponse parsePartialFrom(
+    public getAllChambresResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new getAllchambresResponse(input, extensionRegistry);
+      return new getAllChambresResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<getAllchambresResponse> parser() {
+  public static com.google.protobuf.Parser<getAllChambresResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<getAllchambresResponse> getParserForType() {
+  public com.google.protobuf.Parser<getAllChambresResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.project.booking.stubs.getAllchambresResponse getDefaultInstanceForType() {
+  public com.project.booking.stubs.getAllChambresResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
