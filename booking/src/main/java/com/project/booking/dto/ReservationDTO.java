@@ -24,16 +24,16 @@ import java.util.List;
 public class ReservationDTO {
 
 
-    @JsonProperty("date_debut")
+    @JsonProperty("dateDebut")
     private String dateDebut;
 
-    @JsonProperty("date_fin")
+    @JsonProperty("dateFin")
     private String dateFin;
 
-    @JsonProperty("client_id")
+    @JsonProperty("clientId")
     private Long clientId;
 
-    @JsonProperty("chambre_id")
+    @JsonProperty("chambreId")
     private Long chambreId;
 
     @JsonProperty("preferences")
