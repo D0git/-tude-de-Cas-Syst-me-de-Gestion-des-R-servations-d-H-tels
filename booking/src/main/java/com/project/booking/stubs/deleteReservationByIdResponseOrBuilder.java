@@ -8,17 +8,17 @@ public interface deleteReservationByIdResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.DeleteCompteResult deleted = 1;</code>
+   * <code>.DeleteReservationResult deleted = 1;</code>
    * @return Whether the deleted field is set.
    */
   boolean hasDeleted();
   /**
-   * <code>.DeleteCompteResult deleted = 1;</code>
+   * <code>.DeleteReservationResult deleted = 1;</code>
    * @return The deleted.
    */
-  com.project.booking.stubs.DeleteCompteResult getDeleted();
+  com.project.booking.stubs.DeleteReservationResult getDeleted();
   /**
-   * <code>.DeleteCompteResult deleted = 1;</code>
+   * <code>.DeleteReservationResult deleted = 1;</code>
    */
-  com.project.booking.stubs.DeleteCompteResultOrBuilder getDeletedOrBuilder();
+  com.project.booking.stubs.DeleteReservationResultOrBuilder getDeletedOrBuilder();
 }

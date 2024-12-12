@@ -30,20 +30,30 @@ public final class ReservationOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Preference_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PreferenceDTO_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PreferenceDTO_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Reservation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Reservation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_getAllchambresRequest_descriptor;
+    internal_static_ReservationDTO_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_getAllchambresRequest_fieldAccessorTable;
+      internal_static_ReservationDTO_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_getAllchambresResponse_descriptor;
+    internal_static_getAllChambresRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_getAllchambresResponse_fieldAccessorTable;
+      internal_static_getAllChambresRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_getAllChambresResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_getAllChambresResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_getAllPreferencesRequest_descriptor;
   static final 
@@ -80,10 +90,10 @@ public final class ReservationOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_deleteReservationByIdRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_DeleteCompteResult_descriptor;
+    internal_static_DeleteReservationResult_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_DeleteCompteResult_fieldAccessorTable;
+      internal_static_DeleteReservationResult_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_deleteReservationByIdResponse_descriptor;
   static final 
@@ -99,6 +109,16 @@ public final class ReservationOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_saveReservationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_updateReservationRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_updateReservationRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_updateReservationResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_updateReservationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -113,37 +133,51 @@ public final class ReservationOuterClass {
       "type\030\004 \001(\0162\014.TypeChambre\"S\n\006Client\022\n\n\002id" +
       "\030\001 \001(\003\022\013\n\003nom\030\002 \001(\t\022\016\n\006prenom\030\003 \001(\t\022\r\n\005e" +
       "mail\030\004 \001(\t\022\021\n\ttelephone\030\005 \001(\t\"%\n\nPrefere" +
-      "nce\022\n\n\002id\030\001 \001(\003\022\013\n\003nom\030\002 \001(\t\"\222\001\n\013Reserva" +
-      "tion\022\n\n\002id\030\001 \001(\003\022\021\n\tdateDebut\030\002 \001(\t\022\017\n\007d" +
-      "ateFin\030\003 \001(\t\022\027\n\006client\030\004 \001(\0132\007.Client\022\031\n" +
-      "\007chambre\030\005 \001(\0132\010.Chambre\022\037\n\npreference\030\006" +
-      " \001(\0132\013.Preference\"\027\n\025getAllchambresReque" +
-      "st\"4\n\026getAllchambresResponse\022\032\n\010chambres" +
-      "\030\001 \003(\0132\010.Chambre\"\032\n\030getAllPreferencesReq" +
-      "uest\"=\n\031getAllPreferencesResponse\022 \n\013pre" +
-      "ferences\030\001 \003(\0132\013.Preference\"\033\n\031getAllRes" +
-      "ervationsRequest\"@\n\032getAllReservationsRe" +
-      "sponse\022\"\n\014reservations\030\001 \003(\0132\014.Reservati" +
-      "on\"\'\n\031getReservationByIdRequest\022\n\n\002id\030\001 " +
-      "\001(\t\"?\n\032getReservationByIdResponse\022!\n\013res" +
-      "ervation\030\001 \001(\0132\014.Reservation\"*\n\034deleteRe" +
-      "servationByIdRequest\022\n\n\002id\030\001 \001(\t\"$\n\022Dele" +
-      "teCompteResult\022\016\n\006result\030\001 \001(\t\"E\n\035delete" +
-      "ReservationByIdResponse\022$\n\007deleted\030\001 \001(\013" +
-      "2\023.DeleteCompteResult\";\n\026saveReservation" +
-      "Request\022!\n\013reservation\030\001 \001(\0132\014.Reservati" +
-      "on\"<\n\027saveReservationResponse\022!\n\013reserva" +
-      "tion\030\001 \001(\0132\014.Reservation*%\n\013TypeChambre\022" +
-      "\n\n\006SIMPLE\020\000\022\n\n\006DOUBLE\020\0012\305\002\n\rCompteServic" +
-      "e\022J\n\017AllReservations\022\032.getAllReservation" +
-      "sRequest\032\033.getAllReservationsResponse\022J\n" +
-      "\017ReservationById\022\032.getReservationByIdReq" +
-      "uest\032\033.getReservationByIdResponse\022D\n\017Sav" +
-      "eReservation\022\027.saveReservationRequest\032\030." +
-      "saveReservationResponse\022V\n\025DeleteReserva" +
-      "tionById\022\035.deleteReservationByIdRequest\032" +
-      "\036.deleteReservationByIdResponseB\035\n\031com.p" +
-      "roject.booking.stubsP\001b\006proto3"
+      "nce\022\n\n\002id\030\001 \001(\003\022\013\n\003nom\030\002 \001(\t\"\034\n\rPreferen" +
+      "ceDTO\022\013\n\003nom\030\001 \001(\t\"\223\001\n\013Reservation\022\n\n\002id" +
+      "\030\001 \001(\003\022\021\n\tdateDebut\030\002 \001(\t\022\017\n\007dateFin\030\003 \001" +
+      "(\t\022\031\n\007chambre\030\004 \001(\0132\010.Chambre\022\027\n\006client\030" +
+      "\005 \001(\0132\007.Client\022 \n\013preferences\030\006 \003(\0132\013.Pr" +
+      "eference\"~\n\016ReservationDTO\022\021\n\tdateDebut\030" +
+      "\001 \001(\t\022\017\n\007dateFin\030\002 \001(\t\022\021\n\tchambreId\030\003 \001(" +
+      "\003\022\020\n\010clientId\030\004 \001(\003\022#\n\013preferences\030\005 \003(\013" +
+      "2\016.PreferenceDTO\"\027\n\025getAllChambresReques" +
+      "t\"4\n\026getAllChambresResponse\022\032\n\010chambres\030" +
+      "\001 \003(\0132\010.Chambre\"\032\n\030getAllPreferencesRequ" +
+      "est\"=\n\031getAllPreferencesResponse\022 \n\013pref" +
+      "erences\030\001 \003(\0132\013.Preference\"\033\n\031getAllRese" +
+      "rvationsRequest\"@\n\032getAllReservationsRes" +
+      "ponse\022\"\n\014reservations\030\001 \003(\0132\014.Reservatio" +
+      "n\"\'\n\031getReservationByIdRequest\022\n\n\002id\030\001 \001" +
+      "(\t\"?\n\032getReservationByIdResponse\022!\n\013rese" +
+      "rvation\030\001 \001(\0132\014.Reservation\"*\n\034deleteRes" +
+      "ervationByIdRequest\022\n\n\002id\030\001 \001(\t\")\n\027Delet" +
+      "eReservationResult\022\016\n\006result\030\001 \001(\t\"J\n\035de" +
+      "leteReservationByIdResponse\022)\n\007deleted\030\001" +
+      " \001(\0132\030.DeleteReservationResult\">\n\026saveRe" +
+      "servationRequest\022$\n\013reservation\030\001 \001(\0132\017." +
+      "ReservationDTO\"<\n\027saveReservationRespons" +
+      "e\022!\n\013reservation\030\001 \001(\0132\014.Reservation\"L\n\030" +
+      "updateReservationRequest\022$\n\013reservation\030" +
+      "\001 \001(\0132\017.ReservationDTO\022\n\n\002id\030\002 \001(\003\">\n\031up" +
+      "dateReservationResponse\022!\n\013reservation\030\001" +
+      " \001(\0132\014.Reservation*%\n\013TypeChambre\022\n\n\006SIM" +
+      "PLE\020\000\022\n\n\006DOUBLE\020\0012\237\004\n\022ReservationService" +
+      "\022J\n\017AllReservations\022\032.getAllReservations" +
+      "Request\032\033.getAllReservationsResponse\022>\n\013" +
+      "AllChambres\022\026.getAllChambresRequest\032\027.ge" +
+      "tAllChambresResponse\022G\n\016AllPreferences\022\031" +
+      ".getAllPreferencesRequest\032\032.getAllPrefer" +
+      "encesResponse\022J\n\017ReservationById\022\032.getRe" +
+      "servationByIdRequest\032\033.getReservationByI" +
+      "dResponse\022D\n\017SaveReservation\022\027.saveReser" +
+      "vationRequest\032\030.saveReservationResponse\022" +
+      "J\n\021UpdateReservation\022\031.updateReservation" +
+      "Request\032\032.updateReservationResponse\022V\n\025D" +
+      "eleteReservationById\022\035.deleteReservation" +
+      "ByIdRequest\032\036.deleteReservationByIdRespo" +
+      "nseB\035\n\031com.project.booking.stubsP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -167,89 +201,113 @@ public final class ReservationOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Preference_descriptor,
         new java.lang.String[] { "Id", "Nom", });
-    internal_static_Reservation_descriptor =
+    internal_static_PreferenceDTO_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_PreferenceDTO_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PreferenceDTO_descriptor,
+        new java.lang.String[] { "Nom", });
+    internal_static_Reservation_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Reservation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Reservation_descriptor,
-        new java.lang.String[] { "Id", "DateDebut", "DateFin", "Client", "Chambre", "Preference", });
-    internal_static_getAllchambresRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_getAllchambresRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_getAllchambresRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_getAllchambresResponse_descriptor =
+        new java.lang.String[] { "Id", "DateDebut", "DateFin", "Chambre", "Client", "Preferences", });
+    internal_static_ReservationDTO_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_getAllchambresResponse_fieldAccessorTable = new
+    internal_static_ReservationDTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_getAllchambresResponse_descriptor,
+        internal_static_ReservationDTO_descriptor,
+        new java.lang.String[] { "DateDebut", "DateFin", "ChambreId", "ClientId", "Preferences", });
+    internal_static_getAllChambresRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_getAllChambresRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_getAllChambresRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_getAllChambresResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_getAllChambresResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_getAllChambresResponse_descriptor,
         new java.lang.String[] { "Chambres", });
     internal_static_getAllPreferencesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_getAllPreferencesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_getAllPreferencesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_getAllPreferencesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_getAllPreferencesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_getAllPreferencesResponse_descriptor,
         new java.lang.String[] { "Preferences", });
     internal_static_getAllReservationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_getAllReservationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_getAllReservationsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_getAllReservationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_getAllReservationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_getAllReservationsResponse_descriptor,
         new java.lang.String[] { "Reservations", });
     internal_static_getReservationByIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_getReservationByIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_getReservationByIdRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_getReservationByIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_getReservationByIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_getReservationByIdResponse_descriptor,
         new java.lang.String[] { "Reservation", });
     internal_static_deleteReservationByIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_deleteReservationByIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_deleteReservationByIdRequest_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_DeleteCompteResult_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_DeleteCompteResult_fieldAccessorTable = new
+    internal_static_DeleteReservationResult_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_DeleteReservationResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_DeleteCompteResult_descriptor,
+        internal_static_DeleteReservationResult_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_deleteReservationByIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_deleteReservationByIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_deleteReservationByIdResponse_descriptor,
         new java.lang.String[] { "Deleted", });
     internal_static_saveReservationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_saveReservationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_saveReservationRequest_descriptor,
         new java.lang.String[] { "Reservation", });
     internal_static_saveReservationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_saveReservationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_saveReservationResponse_descriptor,
+        new java.lang.String[] { "Reservation", });
+    internal_static_updateReservationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_updateReservationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_updateReservationRequest_descriptor,
+        new java.lang.String[] { "Reservation", "Id", });
+    internal_static_updateReservationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_updateReservationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_updateReservationResponse_descriptor,
         new java.lang.String[] { "Reservation", });
   }
 

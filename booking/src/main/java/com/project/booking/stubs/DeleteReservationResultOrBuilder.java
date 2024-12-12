@@ -3,8 +3,8 @@
 
 package com.project.booking.stubs;
 
-public interface DeleteCompteResultOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:DeleteCompteResult)
+public interface DeleteReservationResultOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:DeleteReservationResult)
     com.google.protobuf.MessageOrBuilder {
 
   /**
